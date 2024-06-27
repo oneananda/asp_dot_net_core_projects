@@ -1,0 +1,6 @@
+@_001_Web_API_Hello_World_HostAddress = http://localhost:5079
+
+GET {{_001_Web_API_Hello_World_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
