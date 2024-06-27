@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "001_Web_API_Hello_World", "001_Web_API_Hello_World\001_Web_API_Hello_World.csproj", "{DECDCE2E-C982-4750-8357-2653736CF868}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "001_Web_API_Hello_World", "001_Web_API_Hello_World\001_Web_API_Hello_World.csproj", "{DECDCE2E-C982-4750-8357-2653736CF868}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "002_Dependency_Injection", "002_Dependency_Injection\002_Dependency_Injection.csproj", "{EE102DE6-9CA7-40B5-8025-92A7D226030B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DECDCE2E-C982-4750-8357-2653736CF868}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DECDCE2E-C982-4750-8357-2653736CF868}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DECDCE2E-C982-4750-8357-2653736CF868}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE102DE6-9CA7-40B5-8025-92A7D226030B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE102DE6-9CA7-40B5-8025-92A7D226030B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE102DE6-9CA7-40B5-8025-92A7D226030B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE102DE6-9CA7-40B5-8025-92A7D226030B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
