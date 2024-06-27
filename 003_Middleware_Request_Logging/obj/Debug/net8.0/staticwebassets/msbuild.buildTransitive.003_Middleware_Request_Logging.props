@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\003_Middleware_Request_Logging.props" />
+</Project>

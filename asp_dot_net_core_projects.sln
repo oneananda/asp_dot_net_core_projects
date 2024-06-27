@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "001_Web_API_Hello_World", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "002_Dependency_Injection", "002_Dependency_Injection\002_Dependency_Injection.csproj", "{EE102DE6-9CA7-40B5-8025-92A7D226030B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "003_Middleware_Request_Logging", "003_Middleware_Request_Logging\003_Middleware_Request_Logging.csproj", "{68CBB792-224D-47E8-BE31-80C577AF322D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EE102DE6-9CA7-40B5-8025-92A7D226030B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE102DE6-9CA7-40B5-8025-92A7D226030B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE102DE6-9CA7-40B5-8025-92A7D226030B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68CBB792-224D-47E8-BE31-80C577AF322D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68CBB792-224D-47E8-BE31-80C577AF322D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68CBB792-224D-47E8-BE31-80C577AF322D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68CBB792-224D-47E8-BE31-80C577AF322D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

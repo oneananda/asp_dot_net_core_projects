@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "/HLDAwdPKrG5TFa0yKASYP+XIQlcxqjZ9XOd28ldOU8=",
+  "Source": "003_Middleware_Request_Logging",
+  "BasePath": "_content/003_Middleware_Request_Logging",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
