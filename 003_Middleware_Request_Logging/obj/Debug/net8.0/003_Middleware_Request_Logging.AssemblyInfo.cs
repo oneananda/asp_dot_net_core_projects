@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("003_Middleware_Request_Logging")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04707f2c961b8510b9d16c29c4d0b41f97ad0f0e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50f3d04bfdb5b5abe43ce59f059a1466a08342b9")]
 [assembly: System.Reflection.AssemblyProductAttribute("003_Middleware_Request_Logging")]
 [assembly: System.Reflection.AssemblyTitleAttribute("003_Middleware_Request_Logging")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

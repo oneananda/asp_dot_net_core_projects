@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "002_Dependency_Injection", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "003_Middleware_Request_Logging", "003_Middleware_Request_Logging\003_Middleware_Request_Logging.csproj", "{68CBB792-224D-47E8-BE31-80C577AF322D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "004_Routing", "004_Routing\004_Routing.csproj", "{E99D9048-60D4-4488-938F-E85407E517E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "005_Global_Exception_Handler", "005_Global_Exception_Handler\005_Global_Exception_Handler.csproj", "{069FA8F8-FF43-40F1-ADEF-5ED8EEA63386}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{68CBB792-224D-47E8-BE31-80C577AF322D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68CBB792-224D-47E8-BE31-80C577AF322D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68CBB792-224D-47E8-BE31-80C577AF322D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E99D9048-60D4-4488-938F-E85407E517E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E99D9048-60D4-4488-938F-E85407E517E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E99D9048-60D4-4488-938F-E85407E517E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E99D9048-60D4-4488-938F-E85407E517E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{069FA8F8-FF43-40F1-ADEF-5ED8EEA63386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{069FA8F8-FF43-40F1-ADEF-5ED8EEA63386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{069FA8F8-FF43-40F1-ADEF-5ED8EEA63386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{069FA8F8-FF43-40F1-ADEF-5ED8EEA63386}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
