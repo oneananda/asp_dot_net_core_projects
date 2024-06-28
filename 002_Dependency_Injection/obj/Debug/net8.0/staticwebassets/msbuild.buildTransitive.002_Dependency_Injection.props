@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\002_Dependency_Injection.props" />
-</Project>
