@@ -1,0 +1,6 @@
+@_006_Multiple_Configuration_Handling_HostAddress = http://localhost:5186
+
+GET {{_006_Multiple_Configuration_Handling_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
