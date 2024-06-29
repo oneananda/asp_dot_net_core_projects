@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "005_Global_Exception_Handle
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "006_Multiple_Configuration_Handling", "006_Multiple_Configuration_Handling\006_Multiple_Configuration_Handling.csproj", "{B68F4451-01C6-49BF-9DBC-F13A193FF926}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "007_Options_Pattern_Configuration", "007_Options_Pattern_Configuration\007_Options_Pattern_Configuration.csproj", "{3D8AB03B-D829-40A1-BE9E-39E683900863}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "008_Options_Pattern_Complex_Type_Configuration", "008_Options_Pattern_Complex_Type_Configuration\008_Options_Pattern_Complex_Type_Configuration.csproj", "{20B57AF6-8B3E-4BFA-8357-0FD374BF88B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{B68F4451-01C6-49BF-9DBC-F13A193FF926}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B68F4451-01C6-49BF-9DBC-F13A193FF926}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B68F4451-01C6-49BF-9DBC-F13A193FF926}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D8AB03B-D829-40A1-BE9E-39E683900863}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8AB03B-D829-40A1-BE9E-39E683900863}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8AB03B-D829-40A1-BE9E-39E683900863}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8AB03B-D829-40A1-BE9E-39E683900863}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20B57AF6-8B3E-4BFA-8357-0FD374BF88B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20B57AF6-8B3E-4BFA-8357-0FD374BF88B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20B57AF6-8B3E-4BFA-8357-0FD374BF88B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20B57AF6-8B3E-4BFA-8357-0FD374BF88B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
