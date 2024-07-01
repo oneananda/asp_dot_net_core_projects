@@ -70,3 +70,44 @@ Access the API:
 Version 1: GET /api/products?apiVersion=1.0
 
 Version 2: GET /api/products?apiVersion=2.0
+
+## Header Versioning
+
+Passing the Header Value
+
+To pass the api-version header in your HTTP request, you need to include the header in the request.
+
+Examples
+
+```
+curl -H "api-version: 1.0" https://your-api-url/api/customers
+```
+
+Using Postman
+
+Open Postman.
+Create a new GET request.
+Enter the URL (e.g., https://your-api-url/api/customers).
+Go to the "Headers" tab.
+Add a new header with the name api-version and value 1.0.
+Send the request.
+
+
+Using C# HttpClient
+
+```
+
+using System.Net.Http;
+using System.Threading.Tasks;
+
+public async Task<string> GetProductVersionAsync()
+{
+    using (var client = new HttpClient())
+    {
+        client.DefaultRequestHeaders.Add("api-version", "1.0");
+        var response = await client.GetAsync("https://your-api-url/api/customers");
+        return await response.Content.ReadAsStringAsync();
+    }
+}
+
+```

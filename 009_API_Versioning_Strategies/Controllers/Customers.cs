@@ -3,26 +3,20 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace _009_API_Versioning_Strategies.Controllers
 {
-    [Route("api/products")]
+    // Header Versioning
+    [Route("api/customers")]
     [ApiController]
-    public class Products : ControllerBase
+    public class Customers : ControllerBase
     {
-        // Query String Versioning
         [HttpGet]
-        public IActionResult Get([FromQuery] string apiVersion)
+        public IActionResult Get([FromHeader(Name = "api-version")] string apiVersion)
         {
             if (apiVersion == "1,0")
-            {
                 return Ok("This is version 1.0");
-            }
             else if (apiVersion == "2.0")
-            {
                 return Ok("This is version 2.0");
-            }
             else
-            {
                 return BadRequest("Invalid version");
-            }
         }
     }
 }
