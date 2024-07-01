@@ -46,16 +46,16 @@ This project showcases how to implement different API versioning strategies in a
 
     ```bash
     dotnet build
-    ```
-
+    ```   
 ## Running the Application
 
 Run the application using the following command:
 
 ```bash
 dotnet run
+```
 
-**## URL Path Versioning**
+## URL Path Versioning
 
 Access the API:
 
