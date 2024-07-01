@@ -79,11 +79,13 @@ To pass the api-version header in your HTTP request, you need to include the hea
 
 Examples
 
+**Using CURL**
+
 ```
 curl -H "api-version: 1.0" https://your-api-url/api/customers
 ```
 
-Using Postman
+**Using Postman**
 
 Open Postman.
 
@@ -98,7 +100,7 @@ Add a new header with the name api-version and value 1.0.
 Send the request.
 
 
-Using C# HttpClient
+**Using C# HttpClient**
 
 ```
 
