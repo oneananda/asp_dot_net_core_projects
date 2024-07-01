@@ -86,10 +86,15 @@ curl -H "api-version: 1.0" https://your-api-url/api/customers
 Using Postman
 
 Open Postman.
+
 Create a new GET request.
+
 Enter the URL (e.g., https://your-api-url/api/customers).
+
 Go to the "Headers" tab.
+
 Add a new header with the name api-version and value 1.0.
+
 Send the request.
 
 
@@ -100,7 +105,7 @@ Using C# HttpClient
 using System.Net.Http;
 using System.Threading.Tasks;
 
-public async Task<string> GetProductVersionAsync()
+public async Task<string> GetCustomerVersionAsync()
 {
     using (var client = new HttpClient())
     {
