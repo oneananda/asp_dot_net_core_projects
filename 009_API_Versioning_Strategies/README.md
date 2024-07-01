@@ -103,7 +103,6 @@ curl -H "api-version: 1.0" https://your-api-url/api/customers
 **Using C# HttpClient**
 
 ```
-
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -116,5 +115,6 @@ public async Task<string> GetCustomerVersionAsync()
         return await response.Content.ReadAsStringAsync();
     }
 }
-
 ```
+
+_In these examples, the api-version header is set to 1.0, but you can change it to 2.0 or any other value to see different responses._
