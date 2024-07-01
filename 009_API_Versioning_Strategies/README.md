@@ -54,3 +54,10 @@ Run the application using the following command:
 
 ```bash
 dotnet run
+
+## URL Path Versioning
+
+Access the API:
+
+Version 1: GET /api/v1/products
+Version 2: GET /api/v2/products
