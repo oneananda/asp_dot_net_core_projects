@@ -61,3 +61,10 @@ Access the API:
 
 Version 1: GET /api/v1/products
 Version 2: GET /api/v2/products
+
+## Query String Versioning
+
+Access the API:
+
+Version 1: GET /api/products?apiVersion=1.0
+Version 2: GET /api/products?apiVersion=2.0
