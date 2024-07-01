@@ -21,4 +21,4 @@ To get started with these projects, you'll need to have the following installed 
 Clone this repository to your local machine using the following command:
 
 ```sh
-git clone https://github.com/yourusername/asp_dot_net_core_projects.git
+git clone https://github.com/oneananda/asp_dot_net_core_projects.git
