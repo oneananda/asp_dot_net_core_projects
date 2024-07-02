@@ -86,9 +86,9 @@ In the ConfigureServices method, we register the services with the DI container.
 
 Controller Using [FromServices]: In the ProductsController, we have two action methods:
 
-'GetDataA: Uses [FromServices] to inject IServiceA.
+`GetDataA: Uses [FromServices] to inject IServiceA.
 
-GetDataB: Uses [FromServices] to inject IServiceB.'
+GetDataB: Uses [FromServices] to inject IServiceB.`
 
 ### When to Use
 
