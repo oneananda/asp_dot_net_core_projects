@@ -17,7 +17,7 @@
     {
         public string GetData()
         {
-            return "Data from MyService";
+            return "Data from MyService2";
         }
     }
 }

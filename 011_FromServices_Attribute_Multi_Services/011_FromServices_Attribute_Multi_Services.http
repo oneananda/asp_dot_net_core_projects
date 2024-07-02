@@ -1,0 +1,6 @@
+@_011_FromServices_Attribute_Multi_Services_HostAddress = http://localhost:5172
+
+GET {{_011_FromServices_Attribute_Multi_Services_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
