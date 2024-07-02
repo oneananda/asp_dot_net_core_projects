@@ -81,3 +81,9 @@ X-Custom-Header: some-value
 ```
 GET /products/42
 ```
+
+### `FromServices`
+
+```
+GET /service
+```
