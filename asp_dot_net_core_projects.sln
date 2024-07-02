@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "007_Options_Pattern_Configu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "008_Options_Pattern_Complex_Type_Configuration", "008_Options_Pattern_Complex_Type_Configuration\008_Options_Pattern_Complex_Type_Configuration.csproj", "{20B57AF6-8B3E-4BFA-8357-0FD374BF88B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "009_API_Versioning_Strategies", "009_API_Versioning_Strategies\009_API_Versioning_Strategies.csproj", "{092ADDDF-FD7A-4EF9-BEB5-02E06A72D5B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "009_API_Versioning_Strategies", "009_API_Versioning_Strategies\009_API_Versioning_Strategies.csproj", "{092ADDDF-FD7A-4EF9-BEB5-02E06A72D5B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "010_Action_Paramters_Source_Data", "010_Action_Paramters_Source_Data\010_Action_Paramters_Source_Data.csproj", "{7D0B1438-2BA0-43F6-9E30-C8E5F1091060}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{092ADDDF-FD7A-4EF9-BEB5-02E06A72D5B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{092ADDDF-FD7A-4EF9-BEB5-02E06A72D5B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{092ADDDF-FD7A-4EF9-BEB5-02E06A72D5B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D0B1438-2BA0-43F6-9E30-C8E5F1091060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D0B1438-2BA0-43F6-9E30-C8E5F1091060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D0B1438-2BA0-43F6-9E30-C8E5F1091060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D0B1438-2BA0-43F6-9E30-C8E5F1091060}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
