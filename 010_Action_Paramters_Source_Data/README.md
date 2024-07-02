@@ -39,9 +39,7 @@ Endpoint: `/products`
 **Description**: Binds a parameter to data in the query string.
 
 **Example**: 
-```http
-GET /products?category=electronics&page=2
-```
+```http GET /products?category=electronics&page=2```
 
 ### `FromBody`
 
@@ -59,8 +57,20 @@ Content-Type: application/json
 
 ### `FromForm`
 
+```
 POST /upload
 Content-Type: multipart/form-data
 
 file: (binary file data)
 description: "File description"
+```
+
+### `FromHeader`
+
+
+Endpoint: /header
+
+```
+GET /header
+X-Custom-Header: some-value
+```

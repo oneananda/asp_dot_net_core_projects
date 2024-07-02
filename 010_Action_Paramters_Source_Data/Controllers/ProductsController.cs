@@ -4,6 +4,8 @@ using System.Reflection.Metadata;
 using System.Reflection;
 using System.Data.Common;
 using System.Numerics;
+using Microsoft.AspNetCore.WebUtilities;
+using System.Reflection.PortableExecutable;
 
 namespace _010_Action_Paramters_Source_Data.Controllers
 {
@@ -43,6 +45,15 @@ namespace _010_Action_Paramters_Source_Data.Controllers
             // Access file and description from the form data
             return Ok();
         }
-
+        /*
+        FromHeader
+        Binds a parameter to a specified request header.
+        */
+        [HttpGet("header")]
+        public IActionResult GetFromHeader([FromHeader(Name = "X-Custom-Header")] string customHeader)
+        {
+            // Access the X-Custom-Header value from the request headers
+            return Ok(customHeader);
+        }
     }
 }
