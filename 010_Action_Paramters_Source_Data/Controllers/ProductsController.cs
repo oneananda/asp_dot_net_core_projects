@@ -59,6 +59,7 @@ namespace _010_Action_Paramters_Source_Data.Controllers
         FromKeyedServices
         Binds a parameter to a service registered with a specific key. 
         This attribute is available in ASP.NET Core 8.0 and later.
+        This will be explained in detail in an exclusive project
         */
         [HttpGet("keyed")]
         public IActionResult GetKeyedService([FromKeyedServices("myKey")] IMyService myService)
@@ -82,6 +83,19 @@ namespace _010_Action_Paramters_Source_Data.Controllers
         {
             // Dummy data 
             return $"Product {id}";
+        }
+
+        /*
+        FromServices
+        Binds a parameter to a service from the dependency injection container.
+        This will be explained in detail in an exclusive project
+        */
+
+        [HttpGet("service")]
+        public IActionResult GetFromService([FromServices] IMyService myService)
+        {
+            // Example logic to use the service
+            return Ok(myService.GetData());
         }
     }
 }

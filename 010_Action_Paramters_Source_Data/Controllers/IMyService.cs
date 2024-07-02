@@ -2,5 +2,14 @@
 {
     public interface IMyService
     {
+        string GetData();
+    }
+
+    public class MyService : IMyService
+    {
+        public string GetData()
+        {
+            return "Data from MyService";
+        }
     }
 }
