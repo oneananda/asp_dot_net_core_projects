@@ -55,5 +55,33 @@ namespace _010_Action_Paramters_Source_Data.Controllers
             // Access the X-Custom-Header value from the request headers
             return Ok(customHeader);
         }
+        /*
+        FromKeyedServices
+        Binds a parameter to a service registered with a specific key. 
+        This attribute is available in ASP.NET Core 8.0 and later.
+        */
+        [HttpGet("keyed")]
+        public IActionResult GetKeyedService([FromKeyedServices("myKey")] IMyService myService)
+        {
+            // Use the myService which is registered with the key "myKey"
+            return Ok();
+        }
+
+        /*
+        FromRoute
+        Binds a parameter to data in the route.
+        */
+        [HttpGet("products/{id}")]
+        public IActionResult GetProduct([FromRoute] int id)
+        {
+            // Example logic to get product by id
+            var product = GetProductById(id);
+            return Ok(product);
+        }
+        private string GetProductById(int id)
+        {
+            // Dummy data 
+            return $"Product {id}";
+        }
     }
 }

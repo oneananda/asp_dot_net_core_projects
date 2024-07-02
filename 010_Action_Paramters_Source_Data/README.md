@@ -74,3 +74,10 @@ Endpoint: /header
 GET /header
 X-Custom-Header: some-value
 ```
+
+
+### `FromRoute`
+
+```
+GET /products/42
+```
