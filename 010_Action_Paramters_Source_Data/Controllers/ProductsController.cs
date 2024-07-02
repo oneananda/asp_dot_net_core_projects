@@ -32,6 +32,17 @@ namespace _010_Action_Paramters_Source_Data.Controllers
             // Access product data from the request body
             return Ok(product);
         }
+        /*
+        FromForm
+        Binds a parameter to data from posted form data.
+        Used when submitting form data, often with enctype="multipart/form-data".
+        */
+        [HttpPost("upload")]
+        public IActionResult UploadFile([FromForm] IFormFile file, [FromForm] string description)
+        {
+            // Access file and description from the form data
+            return Ok();
+        }
 
     }
 }

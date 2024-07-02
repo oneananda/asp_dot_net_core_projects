@@ -41,3 +41,26 @@ Endpoint: `/products`
 **Example**: 
 ```http
 GET /products?category=electronics&page=2
+```
+
+### `FromBody`
+
+Endpoint: /products
+
+```
+POST /products
+Content-Type: application/json
+
+{
+    "Name": "New Product",
+    "Price": 29.99
+}
+```
+
+### `FromForm`
+
+POST /upload
+Content-Type: multipart/form-data
+
+file: (binary file data)
+description: "File description"
