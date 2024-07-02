@@ -56,7 +56,7 @@ public class ServiceB : IServiceB
 
 ### Endpoints
 
-__The project exposes two endpoints:
+_The project exposes two endpoints:
 
 ***Get Data from Service A***
 
@@ -76,17 +76,15 @@ Response: Data from Service B
 
 ### Explanation of Example
 
-Services Definitions: 
+**Services Definitions:**
 
 We define two services, IServiceA and IServiceB, each with a method to return some data.
 
-Register Services in Startup:
+**Register Services in Startup:**
 
 In the ConfigureServices method, we register the services with the DI container.
 
-Controller Using [FromServices]: 
-
-In the ExampleController, we have two action methods:
+Controller Using [FromServices]: In the ProductsController, we have two action methods:
 
 GetDataA: Uses [FromServices] to inject IServiceA.
 
@@ -96,20 +94,12 @@ GetDataB: Uses [FromServices] to inject IServiceB.
 
 When to Use [FromServices]
 
-Specific Action Method: 
+**Specific Action Method:** _When a service is needed only for a specific action method and not for the entire controller._
 
-When a service is needed only for a specific action method and not for the entire controller.
-
-Reduce Constructor Parameters: 
-
-To avoid having a large number of constructor parameters in the controller.
+**Reduce Constructor Parameters:** _To avoid having a large number of constructor parameters in the controller._
 
 ### Recommendations
 
-Selective Injection: 
+**Selective Injection:** _Inject services only where needed, promoting cleaner and more maintainable code._
 
-Inject services only where needed, promoting cleaner and more maintainable code.
-
-Action-Level Dependencies: 
-
-Useful for action-specific dependencies that are not required at the controller level.
+**Action-Level Dependencies:** _Useful for action-specific dependencies that are not required at the controller level._
