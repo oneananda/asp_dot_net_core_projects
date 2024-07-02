@@ -56,7 +56,7 @@ public class ServiceB : IServiceB
 
 ### Endpoints
 
-_The project exposes two endpoints:
+_The project exposes two endpoints:_
 
 ***Get Data from Service A***
 
