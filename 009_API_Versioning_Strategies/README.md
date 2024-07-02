@@ -59,17 +59,21 @@ dotnet run
 
 Access the API:
 
+```
 Version 1: GET /api/v1/products
 
 Version 2: GET /api/v2/products
+```
 
 ## Query String Versioning
 
 Access the API:
 
+```
 Version 1: GET /api/products?apiVersion=1.0
 
 Version 2: GET /api/products?apiVersion=2.0
+```
 
 ## Header Versioning
 
@@ -118,3 +122,13 @@ public async Task<string> GetCustomerVersionAsync()
 ```
 
 _In these examples, the api-version header is set to 1.0, but you can change it to 2.0 or any other value to see different responses._
+
+
+**Using Media Type Versioning**
+
+Access the API:
+```
+Version 1: GET /api/users with header Accept: application/vnd.company.v1+json
+
+Version 2: GET /api/users with header Accept: application/vnd.company.v2+json
+```
