@@ -6,6 +6,7 @@ namespace _009_API_Versioning_Strategies.Controllers
     // Example for Media Type Versioning
     [Route("api/[controller]")]
     [ApiController]
+    
     public class UsersController : ControllerBase
     {
         [HttpGet]

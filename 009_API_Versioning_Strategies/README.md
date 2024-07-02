@@ -132,3 +132,20 @@ Version 1: GET /api/users with header Accept: application/vnd.company.v1+json
 
 Version 2: GET /api/users with header Accept: application/vnd.company.v2+json
 ```
+
+**Using ASP.NET Core API Versioning Library***
+
+Install via nuget: 
+
+-Asp.Versioning.Mvc
+
+-Asp.Versioning.Mvc.ApiExplorer
+
+**Combining Multiple Versioning Strategies***
+
+In Program.cs or Startup.cs
+```
+options.ApiVersionReader = ApiVersionReader.Combine(
+    new QueryStringApiVersionReader("api-version"),
+    new HeaderApiVersionReader("api-version"));
+```
