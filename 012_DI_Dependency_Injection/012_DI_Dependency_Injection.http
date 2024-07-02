@@ -1,0 +1,6 @@
+@_012_DI_Dependency_Injection_HostAddress = http://localhost:5003
+
+GET {{_012_DI_Dependency_Injection_HostAddress}}/Home/
+Accept: application/json
+
+###
