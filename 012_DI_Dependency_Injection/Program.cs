@@ -8,16 +8,16 @@ namespace _012_DI_Dependency_Injection
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
+            //builder.Services.AddControllers();
 
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
 
-            app.UseAuthorization();
+            //app.UseAuthorization();
 
 
-            app.MapControllers();
+            //app.MapControllers();
 
             CreateHostBuilder(args).Build().Run();
 
