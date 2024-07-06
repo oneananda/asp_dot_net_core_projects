@@ -1,0 +1,6 @@
+@_013_HATEOAS_Implementation_HostAddress = http://localhost:5003
+
+GET {{_013_HATEOAS_Implementation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
