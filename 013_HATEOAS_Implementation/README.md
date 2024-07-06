@@ -37,11 +37,12 @@ HATEOAS is a constraint of the REST application architecture that keeps the REST
     dotnet run
     ```
 
-The API will be available at `http://localhost:5000`.
+The API will be available at `http://localhost:5003`.
 
 ### Usage
 
 You can interact with the API using any HTTP client, such as [curl](https://curl.se/), [Postman](https://www.postman.com/), or directly from your browser.
+
 
 #### Retrieve an Item
 
@@ -49,6 +50,24 @@ You can interact with the API using any HTTP client, such as [curl](https://curl
     ```http
     GET /api/items/1
     ```
+
+#### CURL
+
+```
+curl -X GET "http://localhost:5000/api/items/1" -H "accept: application/json"
+```
+
+#### Using Postman (API Testing Tool)
+Open Postman.
+Set the request type to GET.
+Enter the URL: http://localhost:5003/api/items/1.
+Click Send.
+You should see the JSON response in the Postman response area.
+
+#### Using a Web Browser
+
+http://localhost:5003/api/items/1
+
 
 - **Response**:
     ```json
