@@ -3,12 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace _009_API_Versioning_Strategies.Controllers
 {
-    // Example for Media Type Versioning
+    
     [Route("api/[controller]")]
     [ApiController]
     
     public class UsersController : ControllerBase
     {
+        // Media Type Versioning
         [HttpGet]
         public IActionResult Get([FromHeader(Name = "Accept")] string acceptHeader)
         {
