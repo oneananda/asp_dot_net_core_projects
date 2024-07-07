@@ -15,6 +15,13 @@ namespace _014_RequestDelegate_Implementation.Extensions
             // Adds the CustomMiddleware to the application's request pipeline.
             return app.UseMiddleware<CustomMiddleware>();
         }
+        public static IApplicationBuilder UseMultipleCustomMiddlewares(this IApplicationBuilder app)
+        {
+            // Adds the CustomMiddleware to the application's request pipeline.
+            app.UseMiddleware<AdditionalMiddleware1>();
+            return app.UseMiddleware<AdditionalMiddleware2>();
+        }
+
     }
 
 }

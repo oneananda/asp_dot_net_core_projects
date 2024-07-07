@@ -56,8 +56,11 @@ namespace _014_RequestDelegate_Implementation
             });
             */
 
-            // Calling the Extenstion method
+            // Calling the Extenstion method to add the middleware
             app.UseCustomMiddleware();
+
+            // Adding multiple middlewares in a single extension
+            app.UseMultipleCustomMiddlewares();
 
             app.UseEndpoints(endpoints =>
             {

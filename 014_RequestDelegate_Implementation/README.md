@@ -79,6 +79,18 @@ NoOpMiddleware - Does nothing other than passing the control to next middleware
     });
 ```
 
+
+## Adding multiple middlewares to the application's request pipeline in a single extension
+
+```
+    public static IApplicationBuilder UseMultipleCustomMiddlewares(this IApplicationBuilder app)
+    {
+        // Adds the AdditionalMiddleware1 and AdditionalMiddleware2 to the application's request pipeline.
+        app.UseMiddleware<AdditionalMiddleware1>();
+        return app.UseMiddleware<AdditionalMiddleware2>();
+    }
+```
+
 ## Conclusion
 
 Every middleware component must at least handle the HttpContext to either process it or pass it to the next middleware.
