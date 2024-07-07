@@ -1,0 +1,6 @@
+@_014_RequestDelegate_Implementation_HostAddress = http://localhost:5226
+
+GET {{_014_RequestDelegate_Implementation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

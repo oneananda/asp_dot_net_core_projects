@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "011_FromServices_Attribute_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "012_DI_Dependency_Injection", "012_DI_Dependency_Injection\012_DI_Dependency_Injection.csproj", "{E8CCBCD9-A0B0-4EEE-B408-E44A5CB329DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "013_HATEOAS_Implementation", "013_HATEOAS_Implementation\013_HATEOAS_Implementation.csproj", "{C32F4C4E-2F89-42E4-A3DA-AAB7FADD5316}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "013_HATEOAS_Implementation", "013_HATEOAS_Implementation\013_HATEOAS_Implementation.csproj", "{C32F4C4E-2F89-42E4-A3DA-AAB7FADD5316}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "014_RequestDelegate_Implementation", "014_RequestDelegate_Implementation\014_RequestDelegate_Implementation.csproj", "{532483BB-9C66-48D9-84B6-667A5F43B274}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{C32F4C4E-2F89-42E4-A3DA-AAB7FADD5316}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C32F4C4E-2F89-42E4-A3DA-AAB7FADD5316}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C32F4C4E-2F89-42E4-A3DA-AAB7FADD5316}.Release|Any CPU.Build.0 = Release|Any CPU
+		{532483BB-9C66-48D9-84B6-667A5F43B274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{532483BB-9C66-48D9-84B6-667A5F43B274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{532483BB-9C66-48D9-84B6-667A5F43B274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{532483BB-9C66-48D9-84B6-667A5F43B274}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
