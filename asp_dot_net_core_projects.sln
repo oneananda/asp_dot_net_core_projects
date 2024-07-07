@@ -29,7 +29,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "012_DI_Dependency_Injection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "013_HATEOAS_Implementation", "013_HATEOAS_Implementation\013_HATEOAS_Implementation.csproj", "{C32F4C4E-2F89-42E4-A3DA-AAB7FADD5316}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "014_RequestDelegate_Implementation", "014_RequestDelegate_Implementation\014_RequestDelegate_Implementation.csproj", "{532483BB-9C66-48D9-84B6-667A5F43B274}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "014_RequestDelegate_Implementation", "014_RequestDelegate_Implementation\014_RequestDelegate_Implementation.csproj", "{532483BB-9C66-48D9-84B6-667A5F43B274}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authorization", "Authorization", "{D60C058C-3286-4765-8E60-775E9C92F270}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "015_Policy_based_Authorization", "015_Policy_based_Authorization\015_Policy_based_Authorization.csproj", "{E2894B72-487E-4F14-B991-AA685ECBC2E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,9 +97,16 @@ Global
 		{532483BB-9C66-48D9-84B6-667A5F43B274}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{532483BB-9C66-48D9-84B6-667A5F43B274}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{532483BB-9C66-48D9-84B6-667A5F43B274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2894B72-487E-4F14-B991-AA685ECBC2E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2894B72-487E-4F14-B991-AA685ECBC2E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2894B72-487E-4F14-B991-AA685ECBC2E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2894B72-487E-4F14-B991-AA685ECBC2E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E2894B72-487E-4F14-B991-AA685ECBC2E1} = {D60C058C-3286-4765-8E60-775E9C92F270}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CBD34A77-5E9E-45E6-A1AF-07FD72405D2C}

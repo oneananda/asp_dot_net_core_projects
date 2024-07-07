@@ -1,0 +1,6 @@
+@_015_Policy_based_Authorization_HostAddress = http://localhost:5099
+
+GET {{_015_Policy_based_Authorization_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
