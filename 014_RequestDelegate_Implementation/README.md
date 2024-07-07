@@ -48,3 +48,21 @@ The InvokeAsync method is where the request processing logic is implemented. Bef
 
 - In the Configure method, app.UseCustomMiddleware() adds the custom middleware to the request pipeline.
 app.Run(...) is a terminal middleware that processes the request and generates a response.
+
+## Short-circuiting the middleware
+
+- To Short-circuiting the middleware, we are purposefully not passing the command next and see what happens
+
+The pipeline will closes abrubtly, To see Short-circuiting  uncomment the lines mentioned
+
+```
+    // Short-circuiting the middleware
+    // To see Short-circuiting  uncomment the following line
+    /*
+    app.Use(async (context, next) =>
+    {
+        var shortCircuitMiddleware = new ShortCircuitMiddleware(next);
+        await shortCircuitMiddleware.InvokeAsync(context);
+    });
+    */`
+```
