@@ -38,7 +38,7 @@ namespace _014_RequestDelegate_Implementation
 
 
             // NoOpMiddleware - Does nothing other than pass the control to next middleware
-
+            // Direct calling of Middleware
             app.Use(async (context, next) =>
             {
                 var noOpMiddleware = new NoOpMiddleware(next);
@@ -48,6 +48,7 @@ namespace _014_RequestDelegate_Implementation
             // Short-circuiting the middleware
             // To see Short-circuiting  uncomment the following line
             /*
+            // Direct calling of Middleware
             app.Use(async (context, next) =>
             {
                 var shortCircuitMiddleware = new ShortCircuitMiddleware(next);
