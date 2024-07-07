@@ -35,16 +35,16 @@ Finished handling request in CustomMiddleware
 
 ## Code Explaination
 
-- CustomMiddleware Class:
+### CustomMiddleware Class:
 
-The CustomMiddleware class has a constructor that accepts a RequestDelegate parameter, which represents the next middleware in the pipeline.
+- The CustomMiddleware class has a constructor that accepts a RequestDelegate parameter, which represents the next middleware in the pipeline.
 The InvokeAsync method is where the request processing logic is implemented. Before calling _next(context), you can add logic to handle the request. After calling _next(context), you can add logic to handle the response.
 
-- CustomMiddlewareExtensions Class:
+### CustomMiddlewareExtensions Class:
 
-This class contains an extension method UseCustomMiddleware to add the custom middleware to the application builder.
+- This class contains an extension method UseCustomMiddleware to add the custom middleware to the application builder.
 
-- Startup Class:
+### Startup Class:
 
-In the Configure method, app.UseCustomMiddleware() adds the custom middleware to the request pipeline.
+- In the Configure method, app.UseCustomMiddleware() adds the custom middleware to the request pipeline.
 app.Run(...) is a terminal middleware that processes the request and generates a response.
