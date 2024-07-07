@@ -66,3 +66,23 @@ The pipeline will closes abrubtly, To see Short-circuiting  uncomment the lines 
     });
     */`
 ```
+
+## NoOpMiddleware
+
+NoOpMiddleware - Does nothing other than passing the control to next middleware
+
+```
+    app.Use(async (context, next) =>
+    {
+        var noOpMiddleware = new NoOpMiddleware(next);
+        await noOpMiddleware.InvokeAsync(context);
+    });
+```
+
+## Conclusion
+
+Every middleware component must at least handle the HttpContext to either process it or pass it to the next middleware.
+
+Modifying the response and calling the next middleware are optional steps, depending on the middleware's purpose.
+
+The extent of request processing can range from extensive modifications to simple logging or even doing nothing specific.

@@ -35,6 +35,16 @@ namespace _014_RequestDelegate_Implementation
 
             //app.UseAuthorization();
 
+
+
+            // NoOpMiddleware - Does nothing other than pass the control to next middleware
+
+            app.Use(async (context, next) =>
+            {
+                var noOpMiddleware = new NoOpMiddleware(next);
+                await noOpMiddleware.InvokeAsync(context);
+            });
+
             // Short-circuiting the middleware
             // To see Short-circuiting  uncomment the following line
             /*
