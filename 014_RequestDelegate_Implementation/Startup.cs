@@ -1,4 +1,5 @@
 ﻿using _014_RequestDelegate_Implementation.Extensions;
+using _014_RequestDelegate_Implementation.Middleware;
 
 namespace _014_RequestDelegate_Implementation
 {
@@ -33,6 +34,16 @@ namespace _014_RequestDelegate_Implementation
             app.UseRouting();
 
             //app.UseAuthorization();
+
+            // Short-circuiting the middleware
+            // To see Short-circuiting  uncomment the following line
+            /*
+            app.Use(async (context, next) =>
+            {
+                var shortCircuitMiddleware = new ShortCircuitMiddleware(next);
+                await shortCircuitMiddleware.InvokeAsync(context);
+            });
+            */
 
             // Calling the Extenstion method
             app.UseCustomMiddleware();
