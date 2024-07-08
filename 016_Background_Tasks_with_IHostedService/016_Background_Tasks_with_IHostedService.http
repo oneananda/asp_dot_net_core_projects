@@ -1,0 +1,6 @@
+@_016_Background_Tasks_with_IHostedService_HostAddress = http://localhost:5135
+
+GET {{_016_Background_Tasks_with_IHostedService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
