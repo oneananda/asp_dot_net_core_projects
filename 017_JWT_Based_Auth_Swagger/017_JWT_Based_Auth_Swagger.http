@@ -1,0 +1,6 @@
+@_017_JWT_Based_Auth_Swagger_HostAddress = http://localhost:5062
+
+GET {{_017_JWT_Based_Auth_Swagger_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
