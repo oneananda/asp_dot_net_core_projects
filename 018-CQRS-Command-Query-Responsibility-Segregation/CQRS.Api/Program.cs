@@ -1,4 +1,9 @@
 
+using CQRS.Application.Commands;
+using CQRS.Application.Queries;
+using CQRS.Infrastructure.Repositories;
+using CQRS.Persistence;
+
 namespace CQRS.Api
 {
     public class Program
@@ -6,6 +11,13 @@ namespace CQRS.Api
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+
+            builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("CQRSExampleDb"));
+            builder.Services.AddScoped<ProductRepository>();
+            builder.Services.AddScoped<CreateProductCommandHandler>();
+            builder.Services.AddScoped<GetProductByIdQueryHandler>();
+
 
             // Add services to the container.
 
