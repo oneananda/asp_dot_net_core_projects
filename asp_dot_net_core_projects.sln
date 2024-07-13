@@ -35,7 +35,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "015_Policy_based_Authorizat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "016_Background_Tasks_with_IHostedService", "016_Background_Tasks_with_IHostedService\016_Background_Tasks_with_IHostedService.csproj", "{0FB5BA20-6D6F-4BBD-B957-2562A10B09CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "017_JWT_Based_Auth_Swagger", "017_JWT_Based_Auth_Swagger\017_JWT_Based_Auth_Swagger.csproj", "{65CE6CA8-C996-4D7C-A2EB-119609386513}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "017_JWT_Based_Auth_Swagger", "017_JWT_Based_Auth_Swagger\017_JWT_Based_Auth_Swagger.csproj", "{65CE6CA8-C996-4D7C-A2EB-119609386513}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
