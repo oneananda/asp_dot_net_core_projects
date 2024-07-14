@@ -1,31 +1,30 @@
-# ASP.NET Core Web API with JWT Authentication and Swagger
+# ASP.NET Core CQRS (Command Query Responsibility Segregation) 
 
-This project demonstrates how to implement JWT authentication in an ASP.NET Core Web API and how to test it using Swagger.
+This is an example of implementing Command Query Responsibility Segregation (CQRS) in an ASP.NET Core application.
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Configuration](#configuration)
-- [Running the Application](#running-the-application)
-- [Testing with Swagger](#testing-with-swagger)
-- [Contributing](#contributing)
-- [License](#license)
+CQRS
+├── CQRS.Api
+├── CQRS.Application
+│ ├── Commands
+│ └── Queries
+├── CQRS.Domain
+├── CQRS.Infrastructure
+└── CQRS.Persistence
 
 ## Overview
 
-This project provides a template for creating a secure ASP.NET Core Web API with JWT authentication. It includes:
-- Configuring JWT authentication.
-- Protecting API endpoints.
-- Generating and validating JWT tokens.
-- Integrating Swagger for API documentation and testing.
+CQRS (Command Query Responsibility Segregation) is a pattern that separates read and write operations into different models, using commands to update data and queries to read data. This pattern helps to improve performance, scalability, and security by allowing the read and write workloads to scale independently.
+
+This example demonstrates a simple CQRS implementation using ASP.NET Core, Entity Framework Core, and an in-memory database.
 
 ## Features
 
-- **JWT Authentication:** Secure your API endpoints using JSON Web Tokens (JWT).
-- **Swagger Integration:** Easily test and document your API using Swagger UI.
-- **Role-based Access Control:** Implement role-based access control to secure sensitive endpoints.
+- Separation of read and write operations
+- Simplified and maintainable architecture
+- Command handlers for write operations
+- Query handlers for read operations
+- In-memory database for easy setup and testing
+- RESTful API implementation
 
 ## Getting Started
 
@@ -43,10 +42,32 @@ To get a local copy up and running, follow these steps.
    git clone https://github.com/oneananda/asp_dot_net_core_projects.git
    ```
 
-## Testing with Swagger
+## Usage
 
-- Run the application.
-- Open your browser and navigate to https://localhost:<port>/swagger.
-- Use the /auth/token endpoint to generate a JWT token (with Bearer prefix).
-- Click on the Authorize button in Swagger UI, enter Bearer {your_token}, and click Authorize.
-- Now you can access the protected endpoints by including the JWT token in the request headers.
+Use tools like Postman to test the endpoints.
+
+Create a Product
+URL: POST /api/products
+
+Body:
+
+	```
+{
+    "name": "Product1",
+    "price": 100.0
+}
+	```
+
+Get a Product by Id
+URL: GET /api/products/{id}
+
+Response:
+
+
+   ```
+{
+    "id": "guid",
+    "name": "Product1",
+    "price": 100.0
+}
+   ```
