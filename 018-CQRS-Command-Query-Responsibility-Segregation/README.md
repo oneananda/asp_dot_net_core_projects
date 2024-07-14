@@ -49,6 +49,7 @@ To get a local copy up and running, follow these steps.
 Use tools like Postman to test the endpoints.
 
 Create a Product
+
 URL: POST /api/products
 
 Body:
@@ -61,6 +62,7 @@ Body:
 ```	
 
 Get a Product by Id
+
 URL: GET /api/products/{id}
 
 Response:
@@ -76,6 +78,7 @@ Response:
 
 
 Get all Products
+
 URL: /api/Products
 ```
 [
