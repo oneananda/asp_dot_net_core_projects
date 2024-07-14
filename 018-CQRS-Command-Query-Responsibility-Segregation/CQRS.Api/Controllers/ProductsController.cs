@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using CQRS.Application.Commands;
 using CQRS.Application.Queries;
+using CQRS.Application.Queries.Products.GetAll;
+
 
 namespace CQRS.Api.Controllers
 {
@@ -11,11 +13,14 @@ namespace CQRS.Api.Controllers
     {
         private readonly CreateProductCommandHandler _createHandler;
         private readonly GetProductByIdQueryHandler _getHandler;
+        private readonly GetAllProductsHandler _getAllProductsHandler;
 
-        public ProductsController(CreateProductCommandHandler createHandler, GetProductByIdQueryHandler getHandler)
+        public ProductsController(CreateProductCommandHandler createHandler, 
+            GetProductByIdQueryHandler getHandler, GetAllProductsHandler getAllProductsHandler)
         {
             _createHandler = createHandler;
             _getHandler = getHandler;
+            _getAllProductsHandler = getAllProductsHandler;
         }
 
         [HttpPost]
@@ -23,6 +28,14 @@ namespace CQRS.Api.Controllers
         {
             await _createHandler.Handle(command);
             return Ok();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var query = new GetAllProducts();
+            var product = await _getAllProductsHandler.Handle(query);
+            return Ok(product);
         }
 
         [HttpGet("{id}")]

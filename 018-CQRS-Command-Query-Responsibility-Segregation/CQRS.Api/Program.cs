@@ -1,8 +1,10 @@
 
 using CQRS.Application.Commands;
 using CQRS.Application.Queries;
+using CQRS.Application.Queries.Products.GetAll;
 using CQRS.Infrastructure.Repositories;
 using CQRS.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace CQRS.Api
 {
@@ -17,7 +19,7 @@ namespace CQRS.Api
             builder.Services.AddScoped<ProductRepository>();
             builder.Services.AddScoped<CreateProductCommandHandler>();
             builder.Services.AddScoped<GetProductByIdQueryHandler>();
-
+            builder.Services.AddScoped<GetAllProductsHandler>();
 
             // Add services to the container.
 
