@@ -1,20 +1,6 @@
 # ASP.NET Core CQRS (Command Query Responsibility Segregation) 
 
 This is an example of implementing Command Query Responsibility Segregation (CQRS) in an ASP.NET Core application.
-
-
-## Project Structure
-
-   ```
-CQRS
-├── CQRS.Api
-├── CQRS.Application
-│ ├── Commands
-│ └── Queries
-├── CQRS.Domain
-├── CQRS.Infrastructure
-└── CQRS.Persistence
-   ```
    
 ## Overview
 
@@ -31,6 +17,17 @@ This example demonstrates a simple CQRS implementation using ASP.NET Core, Entit
 - In-memory database for easy setup and testing
 - RESTful API implementation
 
+## Project Structure
+```
+CQRS
+├── CQRS.Api
+├── CQRS.Application
+│ ├── Commands
+│ └── Queries
+├── CQRS.Domain
+├── CQRS.Infrastructure
+└── CQRS.Persistence
+```
 ## Getting Started
 
 To get a local copy up and running, follow these steps.
@@ -56,12 +53,12 @@ URL: POST /api/products
 
 Body:
 
-	```
+```
 {
     "name": "Product1",
     "price": 100.0
 }
-	```
+```	
 
 Get a Product by Id
 URL: GET /api/products/{id}
@@ -69,10 +66,10 @@ URL: GET /api/products/{id}
 Response:
 
 
-   ```
+```
 {
     "id": "guid",
     "name": "Product1",
     "price": 100.0
 }
-   ```
+```
