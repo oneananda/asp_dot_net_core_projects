@@ -2,6 +2,10 @@
 
 This is an example of implementing Command Query Responsibility Segregation (CQRS) in an ASP.NET Core application.
 
+
+## Project Structure
+
+   ```
 CQRS
 ├── CQRS.Api
 ├── CQRS.Application
@@ -10,7 +14,8 @@ CQRS
 ├── CQRS.Domain
 ├── CQRS.Infrastructure
 └── CQRS.Persistence
-
+   ```
+   
 ## Overview
 
 CQRS (Command Query Responsibility Segregation) is a pattern that separates read and write operations into different models, using commands to update data and queries to read data. This pattern helps to improve performance, scalability, and security by allowing the read and write workloads to scale independently.
