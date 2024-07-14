@@ -73,3 +73,26 @@ Response:
     "price": 100.0
 }
 ```
+
+
+Get all Products
+URL: /api/Products
+```
+[
+  {
+    "id": "a79f773b-5e63-4277-ac91-12e6608f8a17",
+    "name": "Prod1",
+    "price": 543
+  },
+  {
+    "id": "70c4f09c-d5da-4231-bbb6-60a058851307",
+    "name": "Prod2",
+    "price": 45.55
+  },
+  {
+    "id": "a95776d4-50b0-4a0d-88da-a2b236fea0ab",
+    "name": "Prod3",
+    "price": 2.5
+  }
+]
+```
