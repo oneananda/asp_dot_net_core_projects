@@ -1,7 +1,7 @@
 
+using CQRS.Api.Extensions;
 using CQRS.Application.Commands;
 using CQRS.Application.Queries;
-using CQRS.Application.Queries.Products.GetAll;
 using CQRS.Infrastructure.Repositories;
 using CQRS.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -16,10 +16,10 @@ namespace CQRS.Api
 
 
             builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("CQRSExampleDb"));
-            builder.Services.AddScoped<ProductRepository>();
-            builder.Services.AddScoped<CreateProductCommandHandler>();
-            builder.Services.AddScoped<GetProductByIdQueryHandler>();
-            builder.Services.AddScoped<GetAllProductsHandler>();
+
+            
+            // Grouping all the services related object instantiation to a separate extension method
+            builder.Services.AddProductServices();
 
             // Add services to the container.
 

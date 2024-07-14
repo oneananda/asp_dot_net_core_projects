@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using CQRS.Application.Commands;
 using CQRS.Application.Queries;
-using CQRS.Application.Queries.Products.GetAll;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 
 namespace CQRS.Api.Controllers
@@ -13,14 +13,17 @@ namespace CQRS.Api.Controllers
     {
         private readonly CreateProductCommandHandler _createHandler;
         private readonly GetProductByIdQueryHandler _getHandler;
-        private readonly GetAllProductsHandler _getAllProductsHandler;
-
-        public ProductsController(CreateProductCommandHandler createHandler, 
-            GetProductByIdQueryHandler getHandler, GetAllProductsHandler getAllProductsHandler)
+        private readonly GetAllProductsHandler _getAllHandler;
+        private readonly UpdateProductCommandHandler _updateHandler;
+        public ProductsController(CreateProductCommandHandler createHandler,
+            GetProductByIdQueryHandler getHandler, 
+            GetAllProductsHandler getAllHandler, 
+            UpdateProductCommandHandler updateHandler)
         {
             _createHandler = createHandler;
             _getHandler = getHandler;
-            _getAllProductsHandler = getAllProductsHandler;
+            _getAllHandler = getAllHandler;
+            _updateHandler = updateHandler;
         }
 
         [HttpPost]
@@ -34,8 +37,27 @@ namespace CQRS.Api.Controllers
         public async Task<IActionResult> Get()
         {
             var query = new GetAllProducts();
-            var product = await _getAllProductsHandler.Handle(query);
+            var product = await _getAllHandler.Handle(query);
             return Ok(product);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(Guid id, UpdateProductCommand command)
+        {
+            if (id != command.Id)
+            {
+                return BadRequest("Product ID mismatch");
+            }
+
+            try
+            {
+                await _updateHandler.Handle(command);
+                return Ok();
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
         }
 
         [HttpGet("{id}")]

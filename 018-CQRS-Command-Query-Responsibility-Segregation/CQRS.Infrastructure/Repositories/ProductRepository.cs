@@ -26,5 +26,11 @@ namespace CQRS.Infrastructure.Repositories
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
         }
+
+        public async Task UpdateProduct(Product product)
+        {
+            _context.Products.Update(product);
+            await _context.SaveChangesAsync();
+        }
     }
 }

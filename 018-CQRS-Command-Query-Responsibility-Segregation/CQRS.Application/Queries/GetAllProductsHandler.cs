@@ -6,8 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CQRS.Application.Queries.Products.GetAll
-{  
+namespace CQRS.Application.Queries
+{
     public class GetAllProductsHandler
     {
         private readonly ProductRepository _repository;
