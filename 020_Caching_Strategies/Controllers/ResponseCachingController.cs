@@ -17,8 +17,8 @@ namespace _020_Caching_Strategies.Controllers
             _dataService = dataService;
         }
 
-        [HttpGet("response-caching")]
-        [ResponseCache(Duration =60)]
+        [HttpGet("basic-response-caching")]
+        [ResponseCache(Duration = 60)]
         public IActionResult GetResponseCachedData()
         {
             var returnData = _dataService.GetData();
