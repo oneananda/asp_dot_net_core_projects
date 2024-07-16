@@ -55,6 +55,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "018-CQRS-Command-Query-Resp
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "56082"
+		SlnRelativePath = "018-CQRS-Command-Query-Responsibility-Segregation\"
 	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "019_gRPC_Service_Implementation", "019_gRPC_Service_Implementation\", "{6AFF78B5-7B90-4818-9DF9-CB641A2E20C4}"
@@ -75,7 +76,10 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "019_gRPC_Service_Implementa
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "56092"
+		SlnRelativePath = "019_gRPC_Service_Implementation\"
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "020_Caching_Strategies", "020_Caching_Strategies\020_Caching_Strategies.csproj", "{C248EFFC-5F75-4F37-89D3-A025F196384A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +163,10 @@ Global
 		{6AFF78B5-7B90-4818-9DF9-CB641A2E20C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AFF78B5-7B90-4818-9DF9-CB641A2E20C4}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{6AFF78B5-7B90-4818-9DF9-CB641A2E20C4}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{C248EFFC-5F75-4F37-89D3-A025F196384A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C248EFFC-5F75-4F37-89D3-A025F196384A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C248EFFC-5F75-4F37-89D3-A025F196384A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C248EFFC-5F75-4F37-89D3-A025F196384A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

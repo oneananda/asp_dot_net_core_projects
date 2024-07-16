@@ -7,6 +7,11 @@ namespace _020_Caching_Strategies.Controllers
     [ApiController]
     public class CacheController : ControllerBase
     {
-
+        [HttpGet("response-caching")]
+        [ResponseCache(Duration =60)]
+        public IActionResult GetResponseCachedData()
+        {            
+            return Ok(string.Empty);
+        }
     }
 }
