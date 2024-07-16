@@ -1,4 +1,4 @@
-# GrpcService
+# GrpcService - GrpcClient (under development)
 
 A minimalistic gRPC service built with ASP.NET Core.
 
