@@ -18,6 +18,11 @@ namespace _020_Caching_Strategies.Modal
             //return "This is some data fetched from the database.";
         }
 
+        public LargeDataSet GetDataById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         private List<string> GetLargeGuids()
         {
             List<string> list = new List<string>();

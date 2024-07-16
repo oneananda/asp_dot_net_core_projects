@@ -3,5 +3,7 @@
     public interface IDataService
     {
         public LargeDataSet GetData();
+
+        public LargeDataSet GetDataById(int id);
     }
 }
