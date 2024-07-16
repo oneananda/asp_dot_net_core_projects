@@ -8,7 +8,6 @@ namespace _020_Caching_Strategies.Controllers
     [ApiController]
     public class ResponseCachingController : ControllerBase
     {
-        private readonly IHttpContextAccessor _contextAccessor;
         private readonly IDataService _dataService;
 
         public ResponseCachingController(IDataService dataService)
@@ -21,7 +20,7 @@ namespace _020_Caching_Strategies.Controllers
         public IActionResult GetResponseCachedData()
         {
             var returnData = _dataService.GetData();
-            return Ok(string.Empty);
+            return Ok(returnData);
         }
 
         // Caches responses based on the value of the 'id' query string parameter

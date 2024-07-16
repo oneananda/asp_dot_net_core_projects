@@ -14,6 +14,7 @@ namespace _020_Caching_Strategies.Services
             largeDataSet.Name = "Name";
             largeDataSet.Guids = GetLargeGuids();
             largeDataSet.DateCreated = DateTime.Now;
+            largeDataSet.DateStamp = largeDataSet.DateCreated.ToString("dd-MM-yyyy-HH-mm-ss");
             return largeDataSet;
 
             //return "This is some data fetched from the database.";
@@ -26,13 +27,14 @@ namespace _020_Caching_Strategies.Services
             largeDataSet.Name = "Name";
             largeDataSet.Guids = GetLargeGuids();
             largeDataSet.DateCreated = DateTime.Now;
+            largeDataSet.DateStamp = largeDataSet.DateCreated.ToString("dd-MM-yyyy-HH-mm-ss");
             return largeDataSet;
         }
 
         private List<string> GetLargeGuids()
         {
             List<string> list = new List<string>();
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 10; i++)
             {
                 list.Add(i.ToString() + "_" + Guid.NewGuid().ToString("N"));
             }

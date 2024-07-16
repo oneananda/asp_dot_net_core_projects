@@ -8,6 +8,8 @@
         public string Name { get; set; }
 
         public DateTime DateCreated { get; set; }
+
+        public string DateStamp { get; set; }
         public List<string> Guids { get; set; }
     }
 }

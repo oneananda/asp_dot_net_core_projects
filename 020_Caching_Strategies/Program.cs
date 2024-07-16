@@ -1,4 +1,6 @@
 
+using _020_Caching_Strategies.Services;
+
 namespace _020_Caching_Strategies
 {
     public class Program
@@ -13,6 +15,8 @@ namespace _020_Caching_Strategies
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddScoped<IDataService, DataService>();
 
             var app = builder.Build();
 
