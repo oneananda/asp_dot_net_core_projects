@@ -1,4 +1,6 @@
-﻿namespace _020_Caching_Strategies.Modal
+﻿using _020_Caching_Strategies.Modal;
+
+namespace _020_Caching_Strategies.Services
 {
     public interface IDataService
     {

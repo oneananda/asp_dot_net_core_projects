@@ -1,6 +1,7 @@
 ﻿using System.Linq.Expressions;
+using _020_Caching_Strategies.Modal;
 
-namespace _020_Caching_Strategies.Modal
+namespace _020_Caching_Strategies.Services
 {
     public class DataService : IDataService
     {

@@ -1,4 +1,4 @@
-﻿using _020_Caching_Strategies.Modal;
+﻿using _020_Caching_Strategies.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
