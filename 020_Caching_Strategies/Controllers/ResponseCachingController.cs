@@ -11,9 +11,8 @@ namespace _020_Caching_Strategies.Controllers
         private readonly IHttpContextAccessor _contextAccessor;
         private readonly IDataService _dataService;
 
-        public ResponseCachingController(IHttpContextAccessor contextAccessor, IDataService dataService)
+        public ResponseCachingController(IDataService dataService)
         {
-            _contextAccessor = contextAccessor;
             _dataService = dataService;
         }
 

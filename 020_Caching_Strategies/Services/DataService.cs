@@ -21,7 +21,12 @@ namespace _020_Caching_Strategies.Services
 
         public LargeDataSet GetDataById(int id)
         {
-            throw new NotImplementedException();
+            LargeDataSet largeDataSet = new LargeDataSet();
+            largeDataSet.DataId = id;
+            largeDataSet.Name = "Name";
+            largeDataSet.Guids = GetLargeGuids();
+            largeDataSet.DateCreated = DateTime.Now;
+            return largeDataSet;
         }
 
         private List<string> GetLargeGuids()
