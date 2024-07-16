@@ -6,12 +6,12 @@ namespace _020_Caching_Strategies.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CacheController : ControllerBase
+    public class ResponseCachingController : ControllerBase
     {
         private readonly IHttpContextAccessor _contextAccessor;
         private readonly IDataService _dataService;
 
-        public CacheController(IHttpContextAccessor contextAccessor, IDataService dataService)
+        public ResponseCachingController(IHttpContextAccessor contextAccessor, IDataService dataService)
         {
             _contextAccessor = contextAccessor;
             _dataService = dataService;
