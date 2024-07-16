@@ -1,0 +1,6 @@
+@_020_Caching_Strategies_HostAddress = http://localhost:5197
+
+GET {{_020_Caching_Strategies_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
