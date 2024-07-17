@@ -25,6 +25,10 @@ This project provides an example of using HTTP headers to control response cachi
 Conditional Response Caching
 This project focuses on conditional response caching in ASP.NET Core, demonstrating how to cache responses based on conditions such as request headers or other custom logic.
 
+No Store
+Specifies that the response should not be stored in the cache
+
+
 ### In-Memory Caching:
 
 - **In-Memory Caching**: Caches data in memory with various caching policies.

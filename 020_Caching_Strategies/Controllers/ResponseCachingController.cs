@@ -68,6 +68,14 @@ namespace _020_Caching_Strategies.Controllers
             var data = _dataService.GetData();
             return Ok(data);
         }
+
+        [HttpGet("no-store")]
+        [ResponseCache(NoStore = true, Duration = 0)]
+        public IActionResult GetNoStoreResponseCachedData()
+        {
+            var data = _dataService.GetData();
+            return Ok(data);
+        }
     }
 
 
