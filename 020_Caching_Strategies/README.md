@@ -24,3 +24,9 @@ This project provides an example of using HTTP headers to control response cachi
 
 Conditional Response Caching
 This project focuses on conditional response caching in ASP.NET Core, demonstrating how to cache responses based on conditions such as request headers or other custom logic.
+
+### In-Memory Caching:
+
+- **In-Memory Caching**: Caches data in memory with various caching policies.
+
+In-memory caching in ASP.NET Core is a powerful technique to enhance the performance of your application by storing frequently accessed data in memory. By using the IMemoryCache interface, you can easily manage cache entries, define expiration policies, and reduce the load on your data sources. This approach is ideal for data that does not change frequently and needs to be accessed quickly.
