@@ -1,5 +1,6 @@
 
 using _020_Caching_Strategies.Services;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace _020_Caching_Strategies
 {
@@ -17,6 +18,8 @@ namespace _020_Caching_Strategies
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddScoped<IDataService, DataService>();
+
+            builder.Services.AddMemoryCache();
 
             var app = builder.Build();
 
