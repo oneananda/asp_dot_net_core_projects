@@ -33,6 +33,7 @@ namespace _020_Caching_Strategies.Controllers
         }
 
         // Caches responses based on the value of the 'X-Custom-Header' request header
+        // Test this with Swagger / Postman with different headers
         [HttpGet("response-caching-header")]
         [ResponseCache(Duration = 60, VaryByHeader = "X-Custom-Header")]
         public IActionResult GetResponseCachedDataByHeader()
@@ -49,5 +50,25 @@ namespace _020_Caching_Strategies.Controllers
         //    var data = _dataService.GetData();
         //    return Ok(data);
         //}
+
+        // Conditional response caching based on a custom condition
+        // If the current time is between 6 AM and 9:59 AM (i.e., hours greater than 5 and less than 10),
+        // it sets a Cache-Control header for the response.
+        [HttpGet("conditional-response-caching")]
+        public IActionResult GetConditionalResponseCachedData()
+        {
+            if (DateTime.Now.Hour > 5 && DateTime.Now.Hour < 10)
+            {
+                Response.GetTypedHeaders().CacheControl = new Microsoft.Net.Http.Headers.CacheControlHeaderValue()
+                {
+                    MaxAge = TimeSpan.FromSeconds(30)
+                };
+            }
+
+            var data = _dataService.GetData();
+            return Ok(data);
+        }
     }
+
+
 }
