@@ -15,7 +15,7 @@ A simple real-time chat application using SignalR in ASP.NET Core.
 
 ## Introduction
 
-SignalRDemo is a basic example demonstrating how to implement real-time communication in an ASP.NET Core application using SignalR. This project showcases a simple chat application where users can send and receive messages in real-time.
+This is a basic example demonstrating how to implement real-time communication in an ASP.NET Core application using SignalR. This project showcases a simple chat application where users can send and receive messages in real-time.
 
 ## Features
 
