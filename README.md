@@ -22,8 +22,10 @@ Clone this repository to your local machine using the following command:
 
 ```sh
 git clone https://github.com/oneananda/asp_dot_net_core_projects.git
+```
 
-**## Projects**
+## Projects
+
 ---
 
 ### 001_Web_API_Hello_World
