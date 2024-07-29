@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace _022_Security_Best_Practices
 {
     public class Program
@@ -21,6 +23,16 @@ namespace _022_Security_Best_Practices
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.Use(async (context, next) =>
+            {
+                if (!context.Response.Headers.ContainsKey("Content-Security-Policy"))
+                {
+                    context.Response.Headers.Add("Content-Security-Policy",
+                    "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:;");
+                }
+                await next();
+            });
 
             app.MapControllerRoute(
                 name: "default",
