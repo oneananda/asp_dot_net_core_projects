@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+
+<h2>Contact</h2>
+
+<form asp-action="Contact" method="post">
+    <input type="hidden" name="__RequestVerificationToken" value="@Html.AntiForgeryToken()" />
+    <div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+    </div>
+    <button type="submit">Submit</button>
+</form>
