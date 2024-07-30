@@ -7,4 +7,13 @@
     <div>
         <h1>@Html.Raw(Html.Encode(ViewData["Input"]))</h1>
     </div>
+    <p>
+        Cross-Site Scripting (XSS) Protection
+
+        ASP.NET Core provides several ways to protect against XSS:
+        
+        Automatic Encoding: Razor views automatically HTML-encode any data that is output.
+        
+        AntiXSS Middleware: You can use the HtmlEncoder to explicitly encode any output.
+    </p>
 </div>
