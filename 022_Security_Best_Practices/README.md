@@ -84,4 +84,24 @@ namespace SecurityDemo.Controllers
 ```
 
 
+### Implementing Content Security Policy (CSP)
+
+Implementing Content Security Policy (CSP) headers in ASP.NET Core MVC is a good practice to enhance the security of your application by preventing cross-site scripting (XSS) attacks.
+
+Modify the Startup.cs File:
+
+You need to add CSP headers in the response. This can be done by adding middleware in the Configure method of the Startup class.
+
+```
+        app.Use(async (context, next) =>
+        {
+            context.Response.Headers.Add("Content-Security-Policy",
+                "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:;");
+            await next();
+        });
+```
+
+In this example, the CSP header is set with a policy that allows resources only from the same origin ('self') and allows inline styles and scripts for demonstration purposes. 
+
+
 
