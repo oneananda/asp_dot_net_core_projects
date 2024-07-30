@@ -37,8 +37,8 @@ This project aims to demonstrate how to implement security measures in an ASP.NE
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/SecurityDemo.git
-    cd SecurityDemo
+    git clone https://github.com/oneananda/SecurityBestPractices.git
+    cd SecurityBestPractices
     ```
 
 2. Build the project:

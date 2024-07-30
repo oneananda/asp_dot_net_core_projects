@@ -12,8 +12,10 @@ namespace _022_Security_Best_Practices.Controllers
         {
             _logger = logger;
         }
-
-
+        public IActionResult Index()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
