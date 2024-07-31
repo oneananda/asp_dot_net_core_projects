@@ -105,6 +105,25 @@ In this example, the CSP header is set with a policy that allows resources only 
 
 ### HTTPS Enforcement
 
+Simply use `app.UseHsts()`
+
+HTTP Strict Transport Security (HSTS) is a security feature that helps protect websites against man-in-the-middle attacks such as protocol downgrade attacks and cookie hijacking. It instructs browsers to only communicate with the server over HTTPS.
+
+When app.UseHsts() is called in the Startup.cs file, it adds the Strict-Transport-Security header to responses. This header tells the browser to enforce HTTPS for the domain and subdomains for a specified duration. During this period, the browser will refuse to connect to the site over HTTP.
+
+#### Configure HSTS with custom settings
+
+Configuration
+
+You can customize the HSTS settings, including the max age, whether to include subdomains, and whether to preload the site. Here’s an example of how to configure it:
+
+```
+        app.UseHsts(hsts => hsts
+            .MaxAge(days: 365) // Specify the max-age in days
+            .IncludeSubdomains() // Apply HSTS to subdomains
+            .Preload()); // Indicate that the site is eligible for preload
+```
+
 Simply use `app.UseHttpsRedirection()`
 
 HTTPS Redirection is a feature that ensures all HTTP requests are redirected to HTTPS. This helps enforce secure communication between the client and server by upgrading any non-secure requests to secure ones.
@@ -120,10 +139,15 @@ Configuration
 You can configure the redirection behavior, including specifying the status code for the redirect and the HTTPS port to redirect to. Here’s an example of how to configure it:
 
 ```
- // Configure HTTPS redirection with custom settings
-        app.UseHttpsRedirection(new HttpsRedirectionOptions
-        {
-            RedirectStatusCode = StatusCodes.Status308PermanentRedirect, // Use 308 status code for permanent redirection
-            HttpsPort = 443 // Specify the HTTPS port to redirect to
-        });
+    app.UseHttpsRedirection(new HttpsRedirectionOptions
+    {
+        RedirectStatusCode = StatusCodes.Status308PermanentRedirect, // Use 308 status code for permanent redirection
+        HttpsPort = 443 // Specify the HTTPS port to redirect to
+    });
 ```
+
+#### Summary
+
+app.UseHsts(): Adds the Strict-Transport-Security header to responses, instructing browsers to only use HTTPS for future requests to the site.
+
+app.UseHttpsRedirection(): Redirects all HTTP requests to HTTPS, ensuring that communication is always encrypted.
