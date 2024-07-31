@@ -1,4 +1,7 @@
 
+using System.Reflection;
+using MediatR;
+
 namespace _023_MediatR_Mediator_Pattern
 {
     public class Program
@@ -13,6 +16,9 @@ namespace _023_MediatR_Mediator_Pattern
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            // Register MediatR services
+            builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 
             var app = builder.Build();
 
