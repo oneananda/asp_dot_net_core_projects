@@ -103,5 +103,27 @@ You need to add CSP headers in the response. This can be done by adding middlewa
 
 In this example, the CSP header is set with a policy that allows resources only from the same origin ('self') and allows inline styles and scripts for demonstration purposes. 
 
+### HTTPS Enforcement
 
+Simply use `app.UseHttpsRedirection()`
 
+HTTPS Redirection is a feature that ensures all HTTP requests are redirected to HTTPS. This helps enforce secure communication between the client and server by upgrading any non-secure requests to secure ones.
+
+#### Configure HTTPS redirection with custom settings
+
+How It Works
+
+When app.UseHttpsRedirection() is called, it adds middleware that intercepts HTTP requests and issues a 301 (Moved Permanently) or 302 (Found) redirect to the equivalent HTTPS URL.
+
+Configuration
+
+You can configure the redirection behavior, including specifying the status code for the redirect and the HTTPS port to redirect to. Here’s an example of how to configure it:
+
+```
+ // Configure HTTPS redirection with custom settings
+        app.UseHttpsRedirection(new HttpsRedirectionOptions
+        {
+            RedirectStatusCode = StatusCodes.Status308PermanentRedirect, // Use 308 status code for permanent redirection
+            HttpsPort = 443 // Specify the HTTPS port to redirect to
+        });
+```
