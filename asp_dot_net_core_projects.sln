@@ -83,7 +83,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "020_Caching_Strategies", "0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "021_SignalR_Implementation", "021_SignalR_Implementation\021_SignalR_Implementation.csproj", "{A124A09C-7365-4628-BCF9-4037B111A31F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "022_Security_Best_Practices", "022_Security_Best_Practices\022_Security_Best_Practices.csproj", "{05D7EC0B-84B6-4CF5-BBEA-BA8CE919A0E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "022_Security_Best_Practices", "022_Security_Best_Practices\022_Security_Best_Practices.csproj", "{05D7EC0B-84B6-4CF5-BBEA-BA8CE919A0E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "023_MediatR_Mediator_Pattern", "023_MediatR_Mediator_Pattern\023_MediatR_Mediator_Pattern.csproj", "{296DE525-D04B-41D8-8871-3452F3CB6BA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -179,6 +181,10 @@ Global
 		{05D7EC0B-84B6-4CF5-BBEA-BA8CE919A0E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05D7EC0B-84B6-4CF5-BBEA-BA8CE919A0E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05D7EC0B-84B6-4CF5-BBEA-BA8CE919A0E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{296DE525-D04B-41D8-8871-3452F3CB6BA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{296DE525-D04B-41D8-8871-3452F3CB6BA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{296DE525-D04B-41D8-8871-3452F3CB6BA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{296DE525-D04B-41D8-8871-3452F3CB6BA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

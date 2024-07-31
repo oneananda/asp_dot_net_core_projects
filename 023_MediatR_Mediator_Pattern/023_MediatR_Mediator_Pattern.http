@@ -1,0 +1,6 @@
+@_023_MediatR_Mediator_Pattern_HostAddress = http://localhost:5263
+
+GET {{_023_MediatR_Mediator_Pattern_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
