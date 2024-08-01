@@ -17,8 +17,14 @@ namespace _023_MediatR_Mediator_Pattern
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            MediatRServiceConfiguration mediatRServiceConfiguration = new MediatRServiceConfiguration();
+
             // Register MediatR services
-            builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+            builder.Services.AddMediatR(mediatRServiceConfiguration);
+
+            // Register MediatR services with custom configuration
+            //var mediatRServiceConfiguration = new MediatRServiceConfiguration();
+            //builder.Services.AddMediatR(cfg => cfg.Using(mediatRServiceConfiguration), typeof(Startup).Assembly);
 
             var app = builder.Build();
 
