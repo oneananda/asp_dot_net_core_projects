@@ -38,10 +38,10 @@ Startup.cs: Configures the services and the request pipeline for the application
 
 In this example, we:
 
-__Created an ASP.NET Core Web API project.
+Created an ASP.NET Core Web API project.
 
-__Defined a request and handler using MediatR.
+Defined a request and handler using MediatR.
 
-__Registered MediatR in the Startup class.
+Registered MediatR in the Startup class.
 
-__Used MediatR in a controller to handle requests.
+Used MediatR in a controller to handle requests.
