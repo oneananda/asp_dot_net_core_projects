@@ -1,5 +1,7 @@
 
+using _024_Rate_Limiting.Interfaces;
 using _024_Rate_Limiting.Middleware;
+using _024_Rate_Limiting.Services;
 
 namespace _024_Rate_Limiting
 {
@@ -12,6 +14,8 @@ namespace _024_Rate_Limiting
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddSingleton<IRequestDataService, RequestDataService>();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

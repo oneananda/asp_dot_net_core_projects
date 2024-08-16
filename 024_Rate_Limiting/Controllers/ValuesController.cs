@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using _024_Rate_Limiting.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _024_Rate_Limiting.Controllers
@@ -7,13 +8,17 @@ namespace _024_Rate_Limiting.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        public ValuesController() { }
+        private readonly IRequestDataService _requestDataService;
+        public ValuesController(IRequestDataService requestDataService)
+        {
+            _requestDataService = requestDataService;
+        }
 
-        [HttpGet("getvalues")]
-        public IActionResult GetValues()
+        [HttpGet("get-cache-values")]
+        public IActionResult GetCacheValues()
         {
             // Write the logic to access product and page from the query string
-            return Ok();
+            return Ok(_requestDataService);
         }
     }
 }
