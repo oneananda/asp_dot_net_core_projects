@@ -31,6 +31,11 @@ namespace _024_Rate_Limiting.Middleware
                 return;
             }
 
+            //if (clientIp.Trim() == string.Empty)
+            //{
+            //    clientIp = "localhost";
+            //}
+
             var cacheKey = $"{clientIp}:{DateTime.UtcNow.Minute}";   
 
             if(!_cache.TryGetValue(cacheKey, out int requestCount))

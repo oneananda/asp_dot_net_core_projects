@@ -29,7 +29,7 @@ namespace _024_Rate_Limiting
                 app.UseSwaggerUI();
             }
 
-            //app.UseMiddleware<RateLimitingMiddleware>();
+            app.UseMiddleware<RateLimitingMiddleware>();
 
             app.UseAuthorization();
 
