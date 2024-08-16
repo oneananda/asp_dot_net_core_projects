@@ -17,8 +17,10 @@ namespace _024_Rate_Limiting.Controllers
         [HttpGet("get-cache-values")]
         public IActionResult GetCacheValues()
         {
-            // Write the logic to access product and page from the query string
-            return Ok(_requestDataService);
+            var clientIp = HttpContext.Connection.RemoteIpAddress?.ToString();
+            var cacheKey = $"{clientIp}:{DateTime.UtcNow.Minute}";
+
+            return Ok($"Client Ip: {clientIp}, Current Minute {DateTime.UtcNow.Minute}, Hit count : {_requestDataService.GetRequestCount(cacheKey)}");
         }
     }
 }
