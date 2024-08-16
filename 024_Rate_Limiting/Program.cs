@@ -1,4 +1,6 @@
 
+using _024_Rate_Limiting.Middleware;
+
 namespace _024_Rate_Limiting
 {
     public class Program
@@ -22,6 +24,8 @@ namespace _024_Rate_Limiting
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            //app.UseMiddleware<RateLimitingMiddleware>();
 
             app.UseAuthorization();
 

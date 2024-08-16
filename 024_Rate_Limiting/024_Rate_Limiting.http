@@ -1,6 +1,6 @@
 @_024_Rate_Limiting_HostAddress = http://localhost:5087
 
-GET {{_024_Rate_Limiting_HostAddress}}/weatherforecast/
+GET {{_024_Rate_Limiting_HostAddress}}/values/
 Accept: application/json
 
 ###
