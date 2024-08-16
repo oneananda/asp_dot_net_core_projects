@@ -142,3 +142,12 @@ In today's digital landscape, safeguarding web applications is crucial. This sec
 This is a simple ASP.NET Core Web API application demonstrating the use of MediatR to implement the mediator pattern. MediatR helps in decoupling the sending and handling of requests in the application, leading to cleaner and more maintainable code.
 
 ---
+
+### 024_Rate_Limiting
+This project demonstrates a basic implementation of rate limiting in an ASP.NET Core application using custom middleware. The middleware helps to prevent abuse and manage traffic by limiting the number of requests that can be made from a single IP address within a specified time window.
+
+---
+
+### 024B_Rate_Limiting_Test
+This project demonstrates how to test the rate limiting middleware implemented in an ASP.NET Core application using a C# console application. The goal is to verify that the rate limiting middleware correctly enforces request limits and handles traffic as expected.
+---
