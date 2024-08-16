@@ -20,7 +20,7 @@ namespace _024_Rate_Limiting.Controllers
             var clientIp = HttpContext.Connection.RemoteIpAddress?.ToString();
             var cacheKey = $"{clientIp}:{DateTime.UtcNow.Minute}";
 
-            return Ok($"Client Ip: {clientIp}, Current Minute {DateTime.UtcNow.Minute}, Hit count : {_requestDataService.GetRequestCount(cacheKey)}");
+            return Ok($"Cache Key : {cacheKey}, Client Ip: {clientIp}, Current Minute {DateTime.UtcNow.Minute}, Hit count : {_requestDataService.GetRequestCount(cacheKey)}");
         }
     }
 }
