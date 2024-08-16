@@ -12,8 +12,8 @@ namespace _024_Rate_Limiting.Middleware
 
         private static readonly MemoryCache _cache = new MemoryCache(new MemoryCacheOptions());
 
-        private const int MaxRequestsPerMinute = 60;
-        private const int TimeWindownInSeconds = 60;
+        private const int MaxRequestsPerMinute = 10;
+        private const int TimeWindownInSeconds = 10;
 
         public RateLimitingMiddleware(RequestDelegate next, IRequestDataService requestDataService)
         {
