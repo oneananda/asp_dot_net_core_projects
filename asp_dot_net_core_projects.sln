@@ -85,7 +85,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "021_SignalR_Implementation"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "022_Security_Best_Practices", "022_Security_Best_Practices\022_Security_Best_Practices.csproj", "{05D7EC0B-84B6-4CF5-BBEA-BA8CE919A0E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "023_MediatR_Mediator_Pattern", "023_MediatR_Mediator_Pattern\023_MediatR_Mediator_Pattern.csproj", "{296DE525-D04B-41D8-8871-3452F3CB6BA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "023_MediatR_Mediator_Pattern", "023_MediatR_Mediator_Pattern\023_MediatR_Mediator_Pattern.csproj", "{296DE525-D04B-41D8-8871-3452F3CB6BA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "024_Rate_Limiting", "024_Rate_Limiting\024_Rate_Limiting.csproj", "{D323449B-6E17-4704-9452-8449D04EC31E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -185,6 +187,10 @@ Global
 		{296DE525-D04B-41D8-8871-3452F3CB6BA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{296DE525-D04B-41D8-8871-3452F3CB6BA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{296DE525-D04B-41D8-8871-3452F3CB6BA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D323449B-6E17-4704-9452-8449D04EC31E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D323449B-6E17-4704-9452-8449D04EC31E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D323449B-6E17-4704-9452-8449D04EC31E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D323449B-6E17-4704-9452-8449D04EC31E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
