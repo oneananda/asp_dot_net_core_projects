@@ -1,0 +1,6 @@
+@_025_OAuth_IdentityServer_Implementation_HostAddress = http://localhost:5278
+
+GET {{_025_OAuth_IdentityServer_Implementation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
