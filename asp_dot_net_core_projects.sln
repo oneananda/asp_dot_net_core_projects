@@ -87,9 +87,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "022_Security_Best_Practices
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "023_MediatR_Mediator_Pattern", "023_MediatR_Mediator_Pattern\023_MediatR_Mediator_Pattern.csproj", "{296DE525-D04B-41D8-8871-3452F3CB6BA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "024_Rate_Limiting", "024_Rate_Limiting\024_Rate_Limiting.csproj", "{D323449B-6E17-4704-9452-8449D04EC31E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "024_Rate_Limiting", "024_Rate_Limiting\024_Rate_Limiting.csproj", "{D323449B-6E17-4704-9452-8449D04EC31E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "024B_Rate_Limiting_Test", "024B_Rate_Limiting_Test\024B_Rate_Limiting_Test.csproj", "{18F68B26-169A-450C-B657-83B8C9CAD73C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "024B_Rate_Limiting_Test", "024B_Rate_Limiting_Test\024B_Rate_Limiting_Test.csproj", "{18F68B26-169A-450C-B657-83B8C9CAD73C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "025_OAuth_IdentityServer_Implementation", "025_OAuth_IdentityServer_Implementation\025_OAuth_IdentityServer_Implementation.csproj", "{BB941F1E-116B-4F36-98C4-720364F6E527}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -197,6 +199,10 @@ Global
 		{18F68B26-169A-450C-B657-83B8C9CAD73C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18F68B26-169A-450C-B657-83B8C9CAD73C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18F68B26-169A-450C-B657-83B8C9CAD73C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB941F1E-116B-4F36-98C4-720364F6E527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB941F1E-116B-4F36-98C4-720364F6E527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB941F1E-116B-4F36-98C4-720364F6E527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB941F1E-116B-4F36-98C4-720364F6E527}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
