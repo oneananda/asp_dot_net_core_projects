@@ -43,6 +43,11 @@ To get a local copy up and running, follow these steps.
    git clone https://github.com/oneananda/asp_dot_net_core_projects.git
    ```
 
+## Test Credentials
+
+Username: "Test"
+Password: "Test"
+
 ## Testing with Swagger
 
 - Run the application.
