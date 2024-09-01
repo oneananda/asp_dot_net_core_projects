@@ -110,3 +110,7 @@ $RECYCLE.BIN/
 .vscode/
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,windows,aspnetcore,vs,vscode
+/026_AuthO_Implementation/appsettings.Development.json
+/026_AuthO_Implementation/appsettings.json
+/026_AuthO_Implementation/appsettings.json
+/026_AuthO_Implementation/appsettings.Development.json
