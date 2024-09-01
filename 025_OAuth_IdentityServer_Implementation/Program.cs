@@ -35,7 +35,7 @@ namespace _025_OAuth_IdentityServer_Implementation
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
-                    options.Authority = "https://localhost:5278"; // IdentityServer URL
+                    options.Authority = "http://localhost:7049"; // IdentityServer URL
                     options.Audience = "api1";
                     options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
                     {
