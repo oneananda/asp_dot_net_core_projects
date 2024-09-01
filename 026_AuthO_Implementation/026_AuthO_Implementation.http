@@ -1,0 +1,6 @@
+@_026_AuthO_Implementation_HostAddress = http://localhost:5148
+
+GET {{_026_AuthO_Implementation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
