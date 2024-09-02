@@ -1,0 +1,6 @@
+@_027_Globalization_and_Localization_HostAddress = http://localhost:5097
+
+GET {{_027_Globalization_and_Localization_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
