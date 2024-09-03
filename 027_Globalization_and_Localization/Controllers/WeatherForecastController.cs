@@ -16,8 +16,9 @@ namespace _027_Globalization_and_Localization.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IStringLocalizer<SharedResource> localizer)
         {
+            _localizer = localizer;
             _logger = logger;
         }
 

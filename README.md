@@ -152,3 +152,19 @@ This project demonstrates a basic implementation of `rate limiting` in an ASP.NE
 This project demonstrates how to test the `rate limiting` middleware implemented in an ASP.NET Core application using a C# console application. The goal is to verify that the rate limiting middleware correctly enforces request limits and handles traffic as expected.
 
 ---
+
+
+### 025_OAuth_IdentityServer_Implementation
+This project demonstrates a basic implementation of OAuth using IdentityServer in an ASP.NET Core application. IdentityServer acts as an authentication and authorization server that helps in securing your API and providing identity management. This implementation includes setting up IdentityServer, configuring OAuth clients, and managing access tokens for securing API endpoints, making it ideal for building secure and standards-compliant applications.
+
+---
+
+### 026_AuthO_Implementation
+This project showcases the integration of Auth0 for authentication and authorization in an ASP.NET Core application. Auth0 is a flexible, drop-in solution to add authentication and authorization services to your applications. The implementation covers setting up Auth0, configuring it within your application, and handling user authentication flows such as login, logout, and profile management, providing a quick and scalable way to secure your app without building authentication from scratch.
+
+---
+
+### 027_Globalization_and_Localization
+This project provides a basic implementation of globalization and localization in an ASP.NET Core application. It demonstrates how to make your application adaptable to multiple cultures and languages, enhancing the user experience across different regions. The implementation includes setting up resource files, configuring supported cultures, and implementing language switching, making your application accessible and user-friendly for a global audience.
+
+---
