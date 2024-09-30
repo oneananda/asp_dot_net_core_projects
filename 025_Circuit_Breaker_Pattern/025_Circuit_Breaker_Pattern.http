@@ -1,0 +1,6 @@
+@_025_Circuit_Breaker_Pattern_HostAddress = http://localhost:5196
+
+GET {{_025_Circuit_Breaker_Pattern_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

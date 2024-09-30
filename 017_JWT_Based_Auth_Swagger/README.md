@@ -45,8 +45,8 @@ To get a local copy up and running, follow these steps.
 
 ## Test Credentials
 
-Username: "Test"
-Password: "Test"
+- Username: "Test"
+- Password: "Test"
 
 ## Testing with Swagger
 
