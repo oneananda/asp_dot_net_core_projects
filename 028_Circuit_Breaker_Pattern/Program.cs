@@ -1,5 +1,5 @@
 
-namespace _025_Circuit_Breaker_Pattern
+namespace _028_Circuit_Breaker_Pattern
 {
     public class Program
     {
