@@ -14,3 +14,12 @@ This project demonstrates how to implement a **GraphQL** API using **ASP.NET Cor
 
 ---
 
+## Technologies Used
+
+- **ASP.NET Core**: The web framework used to build the server-side API.
+- **GraphQL.NET**: A .NET GraphQL library for building GraphQL APIs.
+- **Entity Framework Core**: ORM for data persistence.
+- **HotChocolate or GraphQL.NET**: Choose between GraphQL libraries (both options can be supported based on the version).
+- **SQL Server** (or any other DB): For data storage.
+
+---
