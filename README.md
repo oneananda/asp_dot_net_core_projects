@@ -171,4 +171,10 @@ This project provides a basic implementation of globalization and localization i
 
 ### 028_Circuit_Breaker_Pattern 
 This project demonstrates the implementation of the Circuit Breaker pattern in an ASP.NET Core application. The Circuit Breaker pattern is a critical design approach used to handle transient faults and prevent cascading failures in distributed systems. By implementing this pattern, the application can monitor the status of external service calls, automatically manage retries, and temporarily block requests when repeated failures are detected.
+
+---
+
+### 029_GraphQL_Implementation 
+This project demonstrates how to implement a **GraphQL** API using **ASP.NET Core**. It allows you to define queries, mutations, and subscriptions for interacting with data in a more flexible way than traditional RESTful APIs.
+
 ---
