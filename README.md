@@ -168,3 +168,7 @@ This project showcases the integration of Auth0 for authentication and authoriza
 This project provides a basic implementation of globalization and localization in an ASP.NET Core application. It demonstrates how to make your application adaptable to multiple cultures and languages, enhancing the user experience across different regions. The implementation includes setting up resource files, configuring supported cultures, and implementing language switching, making your application accessible and user-friendly for a global audience.
 
 ---
+
+### 028_Circuit_Breaker_Pattern 
+This project demonstrates the implementation of the Circuit Breaker pattern in an ASP.NET Core application. The Circuit Breaker pattern is a critical design approach used to handle transient faults and prevent cascading failures in distributed systems. By implementing this pattern, the application can monitor the status of external service calls, automatically manage retries, and temporarily block requests when repeated failures are detected.
+---
