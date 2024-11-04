@@ -183,3 +183,8 @@ This project demonstrates how to implement a **GraphQL** API using **ASP.NET Cor
 This project serves as a comprehensive guide and implementation example for integrating RabbitMQ with an ASP.NET Core application. RabbitMQ is a widely used message broker that facilitates communication between different parts of an application or between different services. This implementation will showcase how to set up message producers and consumers, ensuring reliable message delivery and asynchronous processing.
 
 ---
+
+### 031_MediatR_Implementation
+This project illustrates the implementation of the MediatR library in an ASP.NET Core application to streamline the handling of requests and responses, promoting a clean and decoupled architecture. MediatR is a popular library used to implement the Mediator design pattern, which helps in managing interactions within an application by reducing direct dependencies between components.
+
+---
