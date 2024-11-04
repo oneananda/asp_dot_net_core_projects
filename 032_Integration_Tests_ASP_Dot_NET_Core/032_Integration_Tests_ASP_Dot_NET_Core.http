@@ -1,0 +1,6 @@
+@_032_Integration_Tests_ASP_Dot_NET_Core_HostAddress = http://localhost:5045
+
+GET {{_032_Integration_Tests_ASP_Dot_NET_Core_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
