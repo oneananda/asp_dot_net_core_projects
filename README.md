@@ -178,3 +178,8 @@ This project demonstrates the implementation of the Circuit Breaker pattern in a
 This project demonstrates how to implement a **GraphQL** API using **ASP.NET Core**. It allows you to define queries, mutations, and subscriptions for interacting with data in a more flexible way than traditional RESTful APIs.
 
 ---
+
+### 030_RabbitMQ_Implementation
+This project serves as a comprehensive guide and implementation example for integrating RabbitMQ with an ASP.NET Core application. RabbitMQ is a widely used message broker that facilitates communication between different parts of an application or between different services. This implementation will showcase how to set up message producers and consumers, ensuring reliable message delivery and asynchronous processing.
+
+---
