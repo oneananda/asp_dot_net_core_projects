@@ -188,3 +188,8 @@ This project serves as a comprehensive guide and implementation example for inte
 This project illustrates the implementation of the MediatR library in an ASP.NET Core application to streamline the handling of requests and responses, promoting a clean and decoupled architecture. MediatR is a popular library used to implement the Mediator design pattern, which helps in managing interactions within an application by reducing direct dependencies between components.
 
 ---
+
+### 032_Integration_Tests_ASP_Dot_NET_Core
+This project demonstrates how to write integration tests in ASP.NET Core. It covers testing the entire request pipeline, including middleware, routing, and controllers. Integration tests help ensure that different components of your application work together as expected.
+
+---
