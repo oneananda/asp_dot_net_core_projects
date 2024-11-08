@@ -1,12 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace _033_Custom_Load_Testing.Controllers
 {
-    public class LoadTestController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class LoadTestController : ControllerBase
     {
-        public IActionResult Index()
+        public IActionResult GetValues()
         {
-            return View();
+            return Ok();
         }
     }
 }
