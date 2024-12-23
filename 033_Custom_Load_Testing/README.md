@@ -46,5 +46,7 @@ Follow these instructions to get a copy of the tool up and running on your local
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/aspnetcore-load-testing-tool.git
-   cd aspnetcore-load-testing-tool
+   git clone https://github.com/oneananda/asp_dot_net_core_projects.git
+   cd asp_dot_net_core_projects
+
+   Locate the project : 033_Custom_Load_Testing
