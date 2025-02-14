@@ -193,3 +193,8 @@ This project illustrates the implementation of the MediatR library in an ASP.NET
 This project demonstrates how to write integration tests in ASP.NET Core. It covers testing the entire request pipeline, including middleware, routing, and controllers. Integration tests help ensure that different components of your application work together as expected.
 
 ---
+
+### 033_Custom_Load_Testing
+A lightweight, easy-to-use load testing tool for ASP.NET Core applications that provides in-depth performance metrics and highlights bottlenecks in your API.
+
+---
