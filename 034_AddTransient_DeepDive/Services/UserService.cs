@@ -6,7 +6,7 @@ namespace _034_AddTransient_DeepDive.Services
 {
     public class UserService : IUserService
     {
-        private readonly IUserRepository _userRepository;
+        public readonly IUserRepository _userRepository;
         private readonly Guid _instanceId;
 
         public UserService(IUserRepository userRepository)
