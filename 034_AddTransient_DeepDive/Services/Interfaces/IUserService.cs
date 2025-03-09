@@ -1,6 +1,11 @@
-﻿namespace _034_AddTransient_DeepDive.Services.Interfaces
+﻿using _034_AddTransient_DeepDive.DTOs;
+
+namespace _034_AddTransient_DeepDive.Services.Interfaces
 {
-    public class IUserService
+    // Business Layer
+    public interface IUserService
     {
+        Guid GetInstanceId();
+        UserDto GetUserDetails(int userId);
     }
 }
