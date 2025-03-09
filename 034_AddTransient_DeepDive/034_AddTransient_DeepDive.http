@@ -1,0 +1,6 @@
+@_034_AddTransient_DeepDive_HostAddress = http://localhost:5004
+
+GET {{_034_AddTransient_DeepDive_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
