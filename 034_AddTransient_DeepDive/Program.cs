@@ -14,6 +14,8 @@ namespace _034_AddTransient_DeepDive
 
             // Add services to the container.
 
+            builder.Services.AddTransient<IBasicService, BasicService>();
+
             builder.Services.AddTransient<IUserService, UserService>();
             builder.Services.AddTransient<IUserRepository, UserRepository>();
 
