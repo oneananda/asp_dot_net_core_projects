@@ -6,7 +6,7 @@
 
 ## 1. Client Sends a Request
 
-1. A user or client (such as a browser or an API consumer) sends an HTTP request to a specific URL/endpoint (e.g., `GET /api/Users/123`).
+1. A user or client (such as a browser or an API consumer) sends an HTTP request to a specific URL/endpoint (e.g., `GET /api/user/123`).
 
 2. The request arrives at your ASP.NET Core application, which is listening for incoming HTTP traffic.
 
@@ -15,7 +15,7 @@
 ## 2. Routing & Controller Activation
 
 3. **Routing**: ASP.NET Core’s routing matches the request path and HTTP verb (GET, POST, etc.) to a corresponding **controller action**.  
-   - For example, `GET /api/users/123` might route to `UsersController.GetUser(int id)`.
+   - For example, `GET /api/user/123` is routing to `UsersController.GetUserDetails(int id)`.
 
 4. **Controller Instantiation**: The ASP.NET Core framework **creates** an instance of the targeted controller.  
    - At this point, **Constructor Injection** occurs:

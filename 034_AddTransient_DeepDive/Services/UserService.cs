@@ -1,4 +1,5 @@
 ﻿using _034_AddTransient_DeepDive.DTOs;
+using _034_AddTransient_DeepDive.Models;
 using _034_AddTransient_DeepDive.Repositories.Interfaces;
 using _034_AddTransient_DeepDive.Services.Interfaces;
 
@@ -19,7 +20,7 @@ namespace _034_AddTransient_DeepDive.Services
 
         public UserDto GetUserDetails(int userId)
         {
-            var user = _userRepository.GetUserById(userId);
+            var user = new User() { Id = userId, Name = Guid.NewGuid().ToString() };// _userRepository.GetUserById(userId);
             return new UserDto { Id = user.Id, FullName = user.Name };
         }
     }
