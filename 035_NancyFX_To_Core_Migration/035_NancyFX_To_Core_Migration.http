@@ -1,0 +1,6 @@
+@_035_NancyFX_To_Core_Migration_HostAddress = http://localhost:5099
+
+GET {{_035_NancyFX_To_Core_Migration_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
