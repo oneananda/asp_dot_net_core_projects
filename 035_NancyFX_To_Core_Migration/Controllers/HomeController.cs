@@ -12,5 +12,11 @@ namespace _035_NancyFX_To_Core_Migration.Controllers
         {
             return Ok("Hello from ASP.NET Core!");
         }
+
+        [HttpGet("greet/{name}")]
+        public IActionResult Greet(string name)
+        {
+            return Ok($"Hello, {name}!");
+        }
     }
 }
