@@ -1,0 +1,6 @@
+@_036_AddScoped_DeepDive_HostAddress = http://localhost:5091
+
+GET {{_036_AddScoped_DeepDive_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
