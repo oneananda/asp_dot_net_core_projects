@@ -1,4 +1,7 @@
 
+using _036_AddScoped_DeepDive.Interfaces;
+using _036_AddScoped_DeepDive.Requests;
+
 namespace _036_AddScoped_DeepDive
 {
     public class Program
@@ -8,6 +11,8 @@ namespace _036_AddScoped_DeepDive
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            builder.Services.AddScoped<IRequestTracker, RequestTracker>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
