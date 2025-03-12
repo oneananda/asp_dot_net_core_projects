@@ -20,6 +20,5 @@ namespace _036_AddScoped_DeepDive.Controllers
 
             return Ok(new { ControllerRequestId  =  _tracker.RequestId });
         }
-
     }
 }
