@@ -1,4 +1,5 @@
 ﻿using _036_AddScoped_DeepDive.Interfaces;
+using _036_AddScoped_DeepDive.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,16 +10,22 @@ namespace _036_AddScoped_DeepDive.Controllers
     public class TrackerController : ControllerBase
     {
         private readonly IRequestTracker _tracker;
-        public TrackerController(IRequestTracker tracker)
+        private readonly IServiceA _serviceA;
+        private readonly IServiceB _serviceB;
+        public TrackerController(IRequestTracker tracker, IServiceA serviceA, IServiceB serviceB)
         {
             _tracker = tracker;
+            _serviceA = serviceA;
+            _serviceB = serviceB;
         }
         [HttpGet]
         public IActionResult Get()
         {
-            Console.WriteLine($"TrackerController: {_tracker.RequestId}");
-
-            return Ok(new { ControllerRequestId  =  _tracker.RequestId });
+            return Ok(new { 
+                ControllerRequestId  =  _tracker.RequestId, 
+                ServiceA = _serviceA.PrintRequestId(),
+                ServiceB = _serviceB.PrintRequestId()
+            });
         }
     }
 }

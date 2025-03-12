@@ -10,9 +10,9 @@ namespace _036_AddScoped_DeepDive.Services
             _requestTracker = requestTracker;
         }
 
-        public void PrintRequestId()
+        public string PrintRequestId()
         {
-            Console.WriteLine($"ServiceB: {_requestTracker.RequestId}");
+            return $"ServiceB: {_requestTracker.RequestId}";
         }
     }
 }

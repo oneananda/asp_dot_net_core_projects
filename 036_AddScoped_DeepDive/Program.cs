@@ -13,7 +13,6 @@ namespace _036_AddScoped_DeepDive
             // Add services to the container.
 
             builder.Services.AddScoped<IRequestTracker, RequestTracker>();
-
             builder.Services.AddScoped<IServiceA, ServiceA>();
             builder.Services.AddScoped<IServiceB, ServiceB>();
 

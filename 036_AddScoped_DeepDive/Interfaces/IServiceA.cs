@@ -2,6 +2,6 @@
 {
     public interface IServiceA
     {
-        void PrintRequestId();
+        string PrintRequestId();
     }
 }
