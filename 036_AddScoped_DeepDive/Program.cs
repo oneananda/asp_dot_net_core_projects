@@ -14,6 +14,10 @@ namespace _036_AddScoped_DeepDive
 
             builder.Services.AddScoped<IRequestTracker, RequestTracker>();
 
+            builder.Services.AddScoped<IServiceA, ServiceA>();
+            builder.Services.AddScoped<IServiceB, ServiceB>();
+
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
