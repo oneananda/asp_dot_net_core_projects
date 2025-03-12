@@ -1,6 +1,6 @@
 
 using _036_AddScoped_DeepDive.Interfaces;
-using _036_AddScoped_DeepDive.Requests;
+using _036_AddScoped_DeepDive.Services;
 
 namespace _036_AddScoped_DeepDive
 {
