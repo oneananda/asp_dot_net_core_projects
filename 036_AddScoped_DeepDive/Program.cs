@@ -16,6 +16,7 @@ namespace _036_AddScoped_DeepDive
             builder.Services.AddScoped<IServiceA, ServiceA>();
             builder.Services.AddScoped<IServiceB, ServiceB>();
 
+            builder.Services.AddScoped<ExampleService2>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
