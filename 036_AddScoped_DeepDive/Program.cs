@@ -18,6 +18,8 @@ namespace _036_AddScoped_DeepDive
 
             builder.Services.AddScoped<ExampleService2>();
 
+            builder.Services.AddScoped<ICartService, CartService>();
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
