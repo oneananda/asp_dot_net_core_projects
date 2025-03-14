@@ -12,7 +12,7 @@ namespace _036_AddScoped_DeepDive.Services
 
         public void AddToCart(string item)
         {
-            _cartService.AddItem($"CartServiceSubB Added {item}");
+            _cartService.AddItem($"CartServiceSubB Added: {item}");
         }
     }
 }
