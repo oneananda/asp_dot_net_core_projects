@@ -4,5 +4,6 @@
     {
         void AddItem(string item);
         IEnumerable<string> GetItems();
+        Guid Guid { get; }
     }
 }

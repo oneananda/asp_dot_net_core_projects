@@ -21,7 +21,7 @@ namespace _036_AddScoped_DeepDive.Controllers
         [HttpGet("add-items")]
         public IActionResult AddItems()
         {
-            _cartService.AddItem("Item from Controller");
+            _cartService.AddItem("Item from Controller"+ " Generated Guid " + _cartService.Guid);
             _cartServiceSubA.AddToCart("Item from CartServiceSubA");
             _cartServiceSubB.AddToCart("Item from CartServiceSubB");
 

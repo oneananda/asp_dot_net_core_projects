@@ -8,8 +8,10 @@ namespace _036_AddScoped_DeepDive.Services
 
         public void AddItem(string item)
         {
-            _items.Add(item);
+            _items.Add(item );
         }
+
+        public Guid Guid { get; } = Guid.NewGuid();
 
         public IEnumerable<string> GetItems() => _items;
     }

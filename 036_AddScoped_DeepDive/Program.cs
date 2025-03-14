@@ -20,9 +20,9 @@ namespace _036_AddScoped_DeepDive
 
             builder.Services.AddScoped<ICartService, CartService>();
 
-            builder.Services.AddScoped<ICartServiceSubB, CartServiceSubB>();
             builder.Services.AddScoped<ICartServiceSubA, CartServiceSubA>();
-
+            builder.Services.AddScoped<ICartServiceSubB, CartServiceSubB>();
+            
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
