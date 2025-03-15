@@ -1,4 +1,4 @@
-# AddScoped DeepDive
+﻿# AddScoped DeepDive
 
 We will see the how AddScoped works internally
 
@@ -21,5 +21,17 @@ When you make an HTTP GET request to `TrackerController`:
    ```
 
 This confirms the same instance is shared throughout the scope of the request.
+
+---
+
+### 🔍 **Explaination of Cart Service Example for state sharing**
+
+| Injection / Request Point        | Which Instance of CartService?   |
+|----------------------------------|----------------------------------|
+| Controller `_cart`               | 🟢 **Instance 1**                |
+| CartServiceSubA `_cart`                 | 🟢 **Instance 1** (same)         |
+| CartServiceSubB `_cart`                 | 🟢 **Instance 1** (still same!)  |
+
+Hence, adding items from multiple services to `_cart` accumulates them into the same list (`Instance 1`), and thus you see consistent, combined results in your response.
 
 ---
