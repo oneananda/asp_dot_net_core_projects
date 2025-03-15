@@ -2,7 +2,9 @@
 using _036_AddScoped_DeepDive.Interfaces;
 using _036_AddScoped_DeepDive.Services;
 using _036_AddScoped_DeepDive.Services.DBContextExample;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 namespace _036_AddScoped_DeepDive
 {
@@ -29,10 +31,24 @@ namespace _036_AddScoped_DeepDive
             // Important: EF Core DbContext is registered as
             // scoped by default because state consistency
             // is essential during one HTTP request.
+            //builder.Services.AddDbContext<AppDbContext>(options =>
+            //{
+            //    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            //});
+            var sqlLiteConnection = new SqliteConnection("Filename=:memory:");
+            sqlLiteConnection.Open();
+
             builder.Services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+                options.UseSqlite(sqlLiteConnection);
             });
+
+            // Create a service provider to retrieve the DbContext instance
+            var serviceProvider = builder.Services.BuildServiceProvider();
+            var context = serviceProvider.GetRequiredService<AppDbContext>();
+            context.Database.EnsureCreated();
+
+            builder.Services.AddScoped<ProductRepository>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
