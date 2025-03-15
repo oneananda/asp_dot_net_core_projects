@@ -1,6 +1,8 @@
 
 using _036_AddScoped_DeepDive.Interfaces;
 using _036_AddScoped_DeepDive.Services;
+using _036_AddScoped_DeepDive.Services.DBContextExample;
+using Microsoft.EntityFrameworkCore;
 
 namespace _036_AddScoped_DeepDive
 {
@@ -22,7 +24,16 @@ namespace _036_AddScoped_DeepDive
 
             builder.Services.AddScoped<ICartServiceSubA, CartServiceSubA>();
             builder.Services.AddScoped<ICartServiceSubB, CartServiceSubB>();
-            
+
+            // Register DbContext as Scoped (default behavior)
+            // Important: EF Core DbContext is registered as
+            // scoped by default because state consistency
+            // is essential during one HTTP request.
+            builder.Services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
