@@ -34,4 +34,17 @@ This confirms the same instance is shared throughout the scope of the request.
 
 Hence, adding items from multiple services to `_cart` accumulates them into the same list (`Instance 1`), and thus you see consistent, combined results in your response.
 
+The same Guid, which is generated in the cart service initially is used throughout the lifetime of the request.
+
+---
+
+## **🎯 Run-Time Example to Confirm Understanding:**
+
+Every time you send an HTTP request, the GUID will change, **but within a single request, the GUID remains identical across all injections**:
+
+| Request # | Controller Guid                           | CartServiceSubA Guid                              | CartServiceSubB Guid                              | AllSame |
+|-----------|-------------------------------------------|--------------------------------------------|--------------------------------------------|---------|
+| 1         | **`11111111-aaaa`**                       | **1111–aaaa (same)**                       | **1111-aaaa**                              | ✅ Yes |
+| 2         | **`different-new-guid`**                  | **`same as Controller`**                   | **`same as Controller`**                   | ✅ Yes |
+
 ---
