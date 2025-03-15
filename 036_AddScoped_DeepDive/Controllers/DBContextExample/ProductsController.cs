@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace _036_AddScoped_DeepDive.Controllers.DBContextExample
 {
-    [Route("products")]
     [ApiController]
+    [Route("[controller]")]
     public class ProductsController : ControllerBase
     {
         private readonly AppDbContext _context;
@@ -20,7 +20,7 @@ namespace _036_AddScoped_DeepDive.Controllers.DBContextExample
             _productRepo = productRepo;
         }
 
-        [HttpPost]
+        [HttpPost("add")]
         public async Task<IActionResult> AddProduct(string productName)
         {
             var product = new Product { Name = productName };
@@ -29,7 +29,14 @@ namespace _036_AddScoped_DeepDive.Controllers.DBContextExample
             // Saving changes once
             await _context.SaveChangesAsync();
 
-            return Ok(product);
+            return Ok(new { AddedProduct = product, AllProducts = _productRepo.GetProductsAsync() });
+        }
+
+        [HttpGet("get-all")]
+        public async Task<IActionResult> GetAllProducts()
+        {
+            var products = await _productRepo.GetProductsAsync();
+            return Ok(products);
         }
     }
 }

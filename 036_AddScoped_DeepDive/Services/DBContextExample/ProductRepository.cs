@@ -1,5 +1,6 @@
 ﻿using _036_AddScoped_DeepDive.Interfaces.DBContextExample;
 using _036_AddScoped_DeepDive.Models.DBContextExample;
+using Microsoft.EntityFrameworkCore;
 
 namespace _036_AddScoped_DeepDive.Services.DBContextExample
 {
@@ -22,6 +23,11 @@ namespace _036_AddScoped_DeepDive.Services.DBContextExample
             _context.Products.Add(product);
 
             return Task.CompletedTask;
+        }
+
+        public async Task<List<Product>> GetProductsAsync()
+        {
+            return await _context.Products.ToListAsync();
         }
     }
 }

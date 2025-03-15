@@ -5,5 +5,6 @@ namespace _036_AddScoped_DeepDive.Interfaces.DBContextExample
     public interface IProductRepository
     {
         Task AddProductAsync(Product product);
+        Task<List<Product>> GetProductsAsync();
     }
 }
