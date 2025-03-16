@@ -1,0 +1,6 @@
+@_037_Abstract_Factory_Pattern_DeepDive_HostAddress = http://localhost:5148
+
+GET {{_037_Abstract_Factory_Pattern_DeepDive_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
