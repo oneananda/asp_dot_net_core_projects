@@ -12,7 +12,7 @@ namespace _037_Abstract_Factory_Pattern_DeepDive
             // PaymentGateways Implementation
             builder.Services.AddScoped<PayPalGateway>();
             builder.Services.AddScoped<StripeGateway>();
-            builder.Services.AddScoped<IPaymentGatewayFactory, PaymentGatewayFactory>()
+            builder.Services.AddScoped<IPaymentGatewayFactory, PaymentGatewayFactory>();
 
 
             // Add services to the container.
