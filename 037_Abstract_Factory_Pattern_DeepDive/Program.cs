@@ -1,4 +1,6 @@
 
+using _037_Abstract_Factory_Pattern_DeepDive.PaymentGateways;
+
 namespace _037_Abstract_Factory_Pattern_DeepDive
 {
     public class Program
@@ -6,6 +8,12 @@ namespace _037_Abstract_Factory_Pattern_DeepDive
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // PaymentGateways Implementation
+            builder.Services.AddScoped<PayPalGateway>();
+            builder.Services.AddScoped<StripeGateway>();
+            builder.Services.AddScoped<IPaymentGatewayFactory, PaymentGatewayFactory>()
+
 
             // Add services to the container.
 
