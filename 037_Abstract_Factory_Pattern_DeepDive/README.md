@@ -2,7 +2,7 @@
 
 The Abstract Factory Pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
 
-### **Scenario 1 PaymentGatewayFactory** :
+## **Scenario 1 PaymentGatewayFactory** :
 
 Consider you're developing a payment gateway service with multiple providers (e.g., PayPal, Stripe, Razorpay). 
 
