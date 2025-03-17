@@ -198,3 +198,9 @@ This project demonstrates how to write integration tests in ASP.NET Core. It cov
 A lightweight, easy-to-use load testing tool for ASP.NET Core applications that provides in-depth performance metrics and highlights bottlenecks in your API.
 
 ---
+
+### 034_AddTransient_DeepDive
+
+A concise yet comprehensive exploration of the AddTransient service lifetime in ASP.NET Core. This project showcases practical scenarios, performance implications, and best practices, helping developers deeply understand when and how to leverage transient dependencies effectively in their applications.
+
+---
