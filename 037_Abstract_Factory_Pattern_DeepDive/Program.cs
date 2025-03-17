@@ -1,6 +1,8 @@
 
 using _037_Abstract_Factory_Pattern_DeepDive.PaymentGateways;
 using _037_Abstract_Factory_Pattern_DeepDive.StorageProviders.Clients;
+using _037_Abstract_Factory_Pattern_DeepDive.StorageProviders.Factory;
+using _037_Abstract_Factory_Pattern_DeepDive.StorageProviders.Interfaces;
 
 namespace _037_Abstract_Factory_Pattern_DeepDive
 {
@@ -19,6 +21,7 @@ namespace _037_Abstract_Factory_Pattern_DeepDive
 
             // Storage Registration
             builder.Services.AddScoped<AwsStorageClient>();
+            builder.Services.AddScoped<IStorageFactory, StorageFactory>();
 
             // Add services to the container.
 
