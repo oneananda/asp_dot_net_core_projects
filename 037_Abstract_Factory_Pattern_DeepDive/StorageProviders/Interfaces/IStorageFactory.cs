@@ -2,5 +2,6 @@
 {
     public interface IStorageFactory
     {
+        ICloudStorageClient GetStorageClient(string provider);
     }
 }

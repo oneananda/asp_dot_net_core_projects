@@ -2,5 +2,7 @@
 {
     public interface ICloudStorageClient
     {
+        Task<string> UploadFileAsync(Stream fileStream, string fileName);
+        Task<Stream> DownloadFileAsync(string fileName);
     }
 }
