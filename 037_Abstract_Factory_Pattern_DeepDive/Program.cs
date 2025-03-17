@@ -1,5 +1,6 @@
 
 using _037_Abstract_Factory_Pattern_DeepDive.PaymentGateways;
+using _037_Abstract_Factory_Pattern_DeepDive.StorageProviders.Clients;
 
 namespace _037_Abstract_Factory_Pattern_DeepDive
 {
@@ -9,11 +10,15 @@ namespace _037_Abstract_Factory_Pattern_DeepDive
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // PaymentGateways Implementation
+            // Register 
+
+            // PaymentGateways Registration
             builder.Services.AddScoped<PayPalGateway>();
             builder.Services.AddScoped<StripeGateway>();
             builder.Services.AddScoped<IPaymentGatewayFactory, PaymentGatewayFactory>();
 
+            // Storage Registration
+            builder.Services.AddScoped<AwsStorageClient>();
 
             // Add services to the container.
 
