@@ -2,6 +2,10 @@
 
 ---
 
+A concise yet comprehensive exploration of the AddTransient service lifetime in ASP.NET Core. This project showcases practical scenarios, performance implications, and best practices, helping developers deeply understand when and how to leverage transient dependencies effectively in their applications.
+
+---
+
 ## Request flow
 
 ## 1. Client Sends a Request

@@ -204,3 +204,9 @@ A lightweight, easy-to-use load testing tool for ASP.NET Core applications that 
 A concise yet comprehensive exploration of the AddTransient service lifetime in ASP.NET Core. This project showcases practical scenarios, performance implications, and best practices, helping developers deeply understand when and how to leverage transient dependencies effectively in their applications.
 
 ---
+
+### 035_NancyFX_To_Core_Migration
+
+A structured guide for migrating applications from NancyFX to ASP.NET Core, covering key differences, routing, middleware, dependency injection, and performance considerations.
+
+---
