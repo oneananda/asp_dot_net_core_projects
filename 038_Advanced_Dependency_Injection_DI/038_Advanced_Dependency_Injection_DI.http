@@ -1,0 +1,6 @@
+@_038_Advanced_Dependency_Injection_DI_HostAddress = http://localhost:5291
+
+GET {{_038_Advanced_Dependency_Injection_DI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
