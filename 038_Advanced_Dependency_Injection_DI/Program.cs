@@ -1,6 +1,9 @@
 
 using _038_Advanced_Dependency_Injection_DI.Registering_Classes_with_Interfaces.Interfaces;
 using _038_Advanced_Dependency_Injection_DI.Registering_Classes_with_Interfaces.Services;
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace _038_Advanced_Dependency_Injection_DI
 {
@@ -13,6 +16,15 @@ namespace _038_Advanced_Dependency_Injection_DI
 
             // Registering_Classes_with_Interfaces
             builder.Services.AddScoped<IUserService, UserService>();
+
+            var sqlLiteConnection = new SqliteConnection("Filename=:memory:");
+            sqlLiteConnection.Open();
+
+            builder.Services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseSqlite(sqlLiteConnection);
+            });
+
 
             // Add services to the container.
 
