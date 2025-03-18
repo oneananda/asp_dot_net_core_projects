@@ -5,9 +5,10 @@ namespace _038_Advanced_Dependency_Injection_DI.Common
 {
     public class RCIAppDbContext : DbContext
     {
-        public DbSet<User> Products { get; set; }
+        public DbSet<User> Users { get; set; }
         public RCIAppDbContext(DbContextOptions<RCIAppDbContext> options) : base(options)
         {
+
         }
     }
 }

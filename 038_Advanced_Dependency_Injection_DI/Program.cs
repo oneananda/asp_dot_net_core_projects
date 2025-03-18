@@ -1,4 +1,5 @@
 
+using _038_Advanced_Dependency_Injection_DI.Common;
 using _038_Advanced_Dependency_Injection_DI.Registering_Classes_with_Interfaces.Interfaces;
 using _038_Advanced_Dependency_Injection_DI.Registering_Classes_with_Interfaces.Services;
 using Microsoft.Data.Sqlite;
@@ -20,7 +21,7 @@ namespace _038_Advanced_Dependency_Injection_DI
             var sqlLiteConnection = new SqliteConnection("Filename=:memory:");
             sqlLiteConnection.Open();
 
-            builder.Services.AddDbContext<AppDbContext>(options =>
+            builder.Services.AddDbContext<RCIAppDbContext>(options =>
             {
                 options.UseSqlite(sqlLiteConnection);
             });
