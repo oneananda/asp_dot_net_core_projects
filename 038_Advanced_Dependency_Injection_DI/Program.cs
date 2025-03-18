@@ -1,4 +1,7 @@
 
+using _038_Advanced_Dependency_Injection_DI.Registering_Classes_with_Interfaces.Interfaces;
+using _038_Advanced_Dependency_Injection_DI.Registering_Classes_with_Interfaces.Services;
+
 namespace _038_Advanced_Dependency_Injection_DI
 {
     public class Program
@@ -6,6 +9,10 @@ namespace _038_Advanced_Dependency_Injection_DI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+
+            // Registering_Classes_with_Interfaces
+            builder.Services.AddScoped<IUserService, UserService>();
 
             // Add services to the container.
 
