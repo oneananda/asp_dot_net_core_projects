@@ -1,4 +1,5 @@
 ﻿using _038_Advanced_Dependency_Injection_DI.Registering_Classes_with_Interfaces.Interfaces;
+using _038_Advanced_Dependency_Injection_DI.Registering_Classes_with_Interfaces.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,10 +17,10 @@ namespace _038_Advanced_Dependency_Injection_DI.Controllers.Registering_Classes_
         }
 
         [HttpPost]
-        public IActionResult Create(string userName)
+        public IActionResult Create(User user)
         {
-            _userService.CreateUser(userName);
-            return Ok();
+            _userService.CreateUser(user);
+            return Ok(new { AddedUser = user, AllUsers = _userService.GetUsersAsync() });
         }
     }
 }

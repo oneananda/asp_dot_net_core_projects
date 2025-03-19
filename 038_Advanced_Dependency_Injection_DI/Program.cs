@@ -26,6 +26,11 @@ namespace _038_Advanced_Dependency_Injection_DI
                 options.UseSqlite(sqlLiteConnection);
             });
 
+            // Create a service provider to retrieve the DbContext instance
+            var serviceProvider = builder.Services.BuildServiceProvider();
+            var context = serviceProvider.GetRequiredService<RCIAppDbContext>();
+            context.Database.EnsureCreated();
+
 
             // Add services to the container.
 

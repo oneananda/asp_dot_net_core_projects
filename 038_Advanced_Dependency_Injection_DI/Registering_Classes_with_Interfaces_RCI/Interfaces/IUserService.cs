@@ -5,5 +5,6 @@ namespace _038_Advanced_Dependency_Injection_DI.Registering_Classes_with_Interfa
     public interface IUserService
     {
         Task CreateUser(User user);
+        Task<List<User>> GetUsersAsync();
     }
 }
