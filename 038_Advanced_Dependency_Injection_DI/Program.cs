@@ -2,6 +2,7 @@
 using _038_Advanced_Dependency_Injection_DI.Common;
 using _038_Advanced_Dependency_Injection_DI.Registering_Classes_with_Interfaces.Interfaces;
 using _038_Advanced_Dependency_Injection_DI.Registering_Classes_with_Interfaces.Services;
+using _038_Advanced_Dependency_Injection_DI.Registering_Classes_Without_Interfaces_RCWI;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -31,6 +32,7 @@ namespace _038_Advanced_Dependency_Injection_DI
             var context = serviceProvider.GetRequiredService<RCIAppDbContext>();
             context.Database.EnsureCreated();
 
+            builder.Services.AddTransient<EmailSender>();
 
             // Add services to the container.
 
