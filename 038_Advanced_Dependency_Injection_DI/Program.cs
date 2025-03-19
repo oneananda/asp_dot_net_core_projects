@@ -3,6 +3,7 @@ using _038_Advanced_Dependency_Injection_DI.Common;
 using _038_Advanced_Dependency_Injection_DI.Registering_Classes_with_Interfaces.Interfaces;
 using _038_Advanced_Dependency_Injection_DI.Registering_Classes_with_Interfaces.Services;
 using _038_Advanced_Dependency_Injection_DI.Registering_Classes_Without_Interfaces_RCWI;
+using _038_Advanced_Dependency_Injection_DI.Registering_Multiple_Implementations_Single_Interface;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -33,6 +34,14 @@ namespace _038_Advanced_Dependency_Injection_DI
             context.Database.EnsureCreated();
 
             builder.Services.AddTransient<EmailSender>();
+
+            builder.Services.AddScoped<PaypalGateway>();
+            builder.Services.AddScoped<StripeGateway>();
+
+            // Alternatively, register as IEnumerable:
+            builder.Services.AddScoped<IPaymentGateway, PaypalGateway>();
+            builder.Services.AddScoped<IPaymentGateway, StripeGateway>();
+
 
             // Add services to the container.
 
