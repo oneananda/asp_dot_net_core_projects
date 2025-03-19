@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace _038_Advanced_Dependency_Injection_DI.Controllers.Registering_Classes_with_Interfaces
+namespace _038_Advanced_Dependency_Injection_DI.Controllers.Registering_Classes_Without_Interfaces
 {
     [ApiController]
     [Route("api/[controller]")]

@@ -14,8 +14,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\Registering_Classes_Without_Interfaces\" />
-  </ItemGroup>
-
 </Project>
