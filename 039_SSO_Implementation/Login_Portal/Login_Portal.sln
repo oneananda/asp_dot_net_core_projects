@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login_Portal_API", "Login_Portal_API\Login_Portal_API.csproj", "{30B37DCF-9F46-4CB8-9157-9738F37E8643}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login_Portal_WebApp", "Login_Portal_WebApp\Login_Portal_WebApp.csproj", "{049902E5-6AD9-46B9-91C6-04A49483BFC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{30B37DCF-9F46-4CB8-9157-9738F37E8643}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30B37DCF-9F46-4CB8-9157-9738F37E8643}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30B37DCF-9F46-4CB8-9157-9738F37E8643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{049902E5-6AD9-46B9-91C6-04A49483BFC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{049902E5-6AD9-46B9-91C6-04A49483BFC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{049902E5-6AD9-46B9-91C6-04A49483BFC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{049902E5-6AD9-46B9-91C6-04A49483BFC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
