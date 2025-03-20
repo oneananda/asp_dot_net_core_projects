@@ -222,3 +222,9 @@ A comprehensive exploration of the AddScoped service lifetime in ASP.NET Core. T
 An in-depth guide on the Abstract Factory design pattern, demonstrating how it can create families of related objects without committing to specific classes. T
 
 ---
+
+### 038_Advanced_Dependency_Injection_DI
+
+A deep dive into advanced dependency injection techniques in ASP.NET Core. This project explores complex topics such as lifetime management nuances, container configuration, interception, decorators, and dynamic service resolution. With practical examples and performance considerations, it empowers developers to architect robust, flexible, and scalable DI solutions in sophisticated applications.
+
+---
