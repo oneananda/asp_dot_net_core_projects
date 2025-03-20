@@ -1,5 +1,6 @@
 
 using _038_Advanced_Dependency_Injection_DI.Common;
+using _038_Advanced_Dependency_Injection_DI.DI_with_Delegate_Factories;
 using _038_Advanced_Dependency_Injection_DI.Registering_Classes_with_Interfaces.Interfaces;
 using _038_Advanced_Dependency_Injection_DI.Registering_Classes_with_Interfaces.Services;
 using _038_Advanced_Dependency_Injection_DI.Registering_Classes_Without_Interfaces_RCWI;
@@ -41,6 +42,15 @@ namespace _038_Advanced_Dependency_Injection_DI
             // Alternatively, register as IEnumerable:
             builder.Services.AddScoped<IPaymentGateway, PaypalGateway>();
             builder.Services.AddScoped<IPaymentGateway, StripeGateway>();
+
+            // DI Registration (with delegate factory)
+
+            builder.Services.AddTransient<EmailSender2>();
+            builder.Services.AddTransient<Func<string, EmailSender2>>(provider => smtpServer =>
+            {
+                return new EmailSender2(smtpServer);
+            });
+
 
 
             // Add services to the container.
