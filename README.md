@@ -216,3 +216,9 @@ A structured guide for migrating applications from NancyFX to ASP.NET Core, cove
 A comprehensive exploration of the AddScoped service lifetime in ASP.NET Core. This project dissects scenarios where scoped lifetimes are most effective, highlighting how dependencies are managed per request. 
 
 ---
+
+### 037_Abstract_Factory_Pattern_DeepDive
+
+An in-depth guide on the Abstract Factory design pattern, demonstrating how it can create families of related objects without committing to specific classes. T
+
+---
