@@ -210,3 +210,9 @@ A concise yet comprehensive exploration of the AddTransient service lifetime in 
 A structured guide for migrating applications from NancyFX to ASP.NET Core, covering key differences, routing, middleware, dependency injection, and performance considerations.
 
 ---
+
+### 036_AddScoped_DeepDive
+
+A comprehensive exploration of the AddScoped service lifetime in ASP.NET Core. This project dissects scenarios where scoped lifetimes are most effective, highlighting how dependencies are managed per request. 
+
+---
