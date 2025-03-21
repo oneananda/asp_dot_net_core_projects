@@ -1,8 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    bool isValidated = TempData["IsValidated"] != null && (bool)TempData["IsValidated"];
+    string message = TempData["Message"] != null ? (string)TempData["Message"] : "Not Authenticated!";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@if (isValidated)
+{
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>
+}
+else
+{
+    <h1 class="display-4">@message</h1>
+}

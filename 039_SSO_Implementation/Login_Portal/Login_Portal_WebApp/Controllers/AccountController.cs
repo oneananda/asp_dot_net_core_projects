@@ -28,14 +28,20 @@ namespace Login_Portal_WebApp.Controllers
                     {
                         return Redirect(returnUrl);
                     }
+                    TempData["IsValidated"] = true;
                     return RedirectToAction("Index", "Home");
                 }
                 else
                 {
+                    TempData["IsValidated"] = false;
                     ModelState.AddModelError("", "Invalid username or password.");
                 }
             }
-            else IterateModel();
+            else
+            {
+                TempData["IsValidated"] = false;
+                IterateModel();
+            }
             return View(model);
         }
 
@@ -51,10 +57,11 @@ namespace Login_Portal_WebApp.Controllers
         }
 
         // POST: /Account/Logout
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpGet]
         public ActionResult Logout()
         {
+            TempData["Message"] = "Logged out!";
+            TempData["IsValidated"] = false;
             //FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
         }
