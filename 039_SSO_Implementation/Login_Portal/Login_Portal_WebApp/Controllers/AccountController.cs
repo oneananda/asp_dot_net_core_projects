@@ -37,9 +37,14 @@ namespace Login_Portal_WebApp.Controllers
             }
             return View(model);
         }
-        public IActionResult Index()
+        // POST: /Account/Logout
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Logout()
         {
-            return View();
+            //FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Home");
         }
+  
     }
 }
