@@ -13,7 +13,7 @@ namespace Login_Portal_WebApp.Controllers
         // POST: /Account/Login
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(User model, string returnUrl)
+        public ActionResult Login(User model, string returnUrl = "Home")
         {
             if (ModelState.IsValid)
             {
@@ -35,8 +35,21 @@ namespace Login_Portal_WebApp.Controllers
                     ModelState.AddModelError("", "Invalid username or password.");
                 }
             }
+            else IterateModel();
             return View(model);
         }
+
+        private void IterateModel()
+        {
+            foreach (var state in ModelState)
+            {
+                foreach (var error in state.Value.Errors)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Key: {state.Key}, Error: {error.ErrorMessage}");
+                }
+            }
+        }
+
         // POST: /Account/Logout
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -45,6 +58,6 @@ namespace Login_Portal_WebApp.Controllers
             //FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
         }
-  
+
     }
 }
