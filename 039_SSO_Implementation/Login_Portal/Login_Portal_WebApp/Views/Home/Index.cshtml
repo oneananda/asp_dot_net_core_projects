@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    
     bool isValidated = TempData["IsValidated"] != null && (bool)TempData["IsValidated"];
     string message = TempData["Message"] != null ? (string)TempData["Message"] : "Not Authenticated!";
 }

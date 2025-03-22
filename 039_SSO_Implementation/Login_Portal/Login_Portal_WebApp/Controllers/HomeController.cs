@@ -14,7 +14,25 @@ namespace Login_Portal_WebApp.Controllers
         }
 
         public IActionResult Index()
-        {            
+        {
+            var isValidated = HttpContext.Session.GetString("IsValidated");
+
+            if (isValidated != null)
+            {
+                if (isValidated == "True")
+                {
+                    TempData["IsValidated"] = true;
+                }
+                else if (isValidated == "False")
+                {
+                    TempData["IsValidated"] = false;
+                }
+            }
+            else
+            {
+
+            }
+
             return View();
         }
 

@@ -29,16 +29,19 @@ namespace Login_Portal_WebApp.Controllers
                         return Redirect(returnUrl);
                     }
                     TempData["IsValidated"] = true;
+                    HttpContext.Session.SetString("IsValidated", "True");
                     return RedirectToAction("Index", "Home");
                 }
                 else
                 {
                     TempData["IsValidated"] = false;
+                    HttpContext.Session.SetString("IsValidated", "False");
                     ModelState.AddModelError("", "Invalid username or password.");
                 }
             }
             else
             {
+                HttpContext.Session.SetString("IsValidated", "False");
                 TempData["IsValidated"] = false;
                 IterateModel();
             }
@@ -62,6 +65,7 @@ namespace Login_Portal_WebApp.Controllers
         {
             TempData["Message"] = "Logged out!";
             TempData["IsValidated"] = false;
+            HttpContext.Session.SetString("IsValidated", "False");
             //FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
         }
