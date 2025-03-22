@@ -66,6 +66,7 @@ namespace Login_Portal_WebApp.Controllers
             TempData["Message"] = "Logged out!";
             TempData["IsValidated"] = false;
             HttpContext.Session.SetString("IsValidated", "False");
+            HttpContext.Session.Clear();
             //FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
         }

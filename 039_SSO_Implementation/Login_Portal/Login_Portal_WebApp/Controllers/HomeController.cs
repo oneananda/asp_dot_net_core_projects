@@ -30,7 +30,7 @@ namespace Login_Portal_WebApp.Controllers
             }
             else
             {
-
+                TempData["IsValidated"] = false;
             }
 
             return View();
