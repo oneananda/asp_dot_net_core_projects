@@ -1,4 +1,5 @@
-﻿using Login_Portal_WebApp.Models;
+﻿using Login_Portal_WebApp.App_Code;
+using Login_Portal_WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -6,6 +7,11 @@ namespace Login_Portal_WebApp.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly AuthService _authService;
+        public AccountController(AuthService authService)
+        {
+            _authService = authService;
+        }
         [HttpGet]
         public ActionResult Login()
         {
@@ -18,13 +24,9 @@ namespace Login_Portal_WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                if(ValidateCredentials(model))
-                //if (model.UserName == "admin" && model.Password == "password")
+                var (isValid, role, message) = _authService.ValidateUser(model.UserName, model.Password, null);
+                if (isValid)
                 {
-                    // Set the auth cookie
-                    //FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
-
-                    // Redirect to the returnUrl if it's valid, otherwise to Home/Index
                     if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
                     {
                         return Redirect(returnUrl);
@@ -48,7 +50,6 @@ namespace Login_Portal_WebApp.Controllers
             }
             return View(model);
         }
-
 
         private void IterateModel()
         {

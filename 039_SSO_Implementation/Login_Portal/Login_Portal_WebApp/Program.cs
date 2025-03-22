@@ -1,3 +1,5 @@
+using Login_Portal_WebApp.App_Code;
+
 namespace Login_Portal_WebApp
 {
     public class Program
@@ -15,6 +17,8 @@ namespace Login_Portal_WebApp
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
             });
+
+            builder.Services.AddScoped<AuthService>();
 
             var app = builder.Build();
 
