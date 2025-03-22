@@ -1,5 +1,6 @@
 ﻿using Login_Portal_WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace Login_Portal_WebApp.Controllers
 {
@@ -17,8 +18,8 @@ namespace Login_Portal_WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                // In a real application, validate against your user store (e.g., database)
-                if (model.UserName == "admin" && model.Password == "password")
+                if(ValidateCredentials(model))
+                //if (model.UserName == "admin" && model.Password == "password")
                 {
                     // Set the auth cookie
                     //FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
@@ -47,6 +48,7 @@ namespace Login_Portal_WebApp.Controllers
             }
             return View(model);
         }
+
 
         private void IterateModel()
         {
