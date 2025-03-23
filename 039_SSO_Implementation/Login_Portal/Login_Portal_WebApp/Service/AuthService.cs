@@ -21,17 +21,17 @@ namespace Login_Portal_WebApp.App_Code
             var json = System.IO.File.ReadAllText(_dataFilePath);
             return JsonConvert.DeserializeObject<List<User>>(json);
         }
-        public (bool IsValid, string Role, string Message, string Token) ValidateUser(string username, string password)
+        public (bool IsValid, string Role, string Message) ValidateUser(string username, string password)
         {
             var users = LoadUsers();
             var user = users.FirstOrDefault(u => u.UserName == username && u.Password == password);
 
             if (user != null)
             {
-                var token = JwtManager.GenerateToken(user.UserName, user.Role);
-                return (true, user.Role, $"Login successful. Role: {user.Role}", token);
+                //var token = JwtManager.GenerateToken(user.UserName, user.Role);
+                return (true, user.Role, $"Login successful. Role: {user.Role}");
             }
-            return (false, user.Role, "Invalid username or password.",null);
+            return (false, user.Role, "Invalid username or password.");
         }
 
         //private string GenerateJSONWebToken()
