@@ -25,7 +25,7 @@ namespace Login_Portal_WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var (isValid, role, message) = _authService.ValidateUser(model.UserName, model.Password, null);
+                var (isValid, role, message) = _authService.ValidateUser(model.UserName, model.Password);
                 if (isValid)
                 {
                     if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))

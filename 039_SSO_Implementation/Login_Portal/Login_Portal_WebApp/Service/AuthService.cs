@@ -1,4 +1,5 @@
 ﻿using Login_Portal_WebApp.Models;
+using Login_Portal_WebApp.Service;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using System.IdentityModel.Tokens.Jwt;
@@ -9,7 +10,7 @@ namespace Login_Portal_WebApp.App_Code
     public class AuthService
     {
         private readonly IConfiguration _config;
-        private readonly string _dataFilePath;        
+        private readonly string _dataFilePath;
         public AuthService(IConfiguration config, IWebHostEnvironment env)
         {
             _config = config;
@@ -20,38 +21,31 @@ namespace Login_Portal_WebApp.App_Code
             var json = System.IO.File.ReadAllText(_dataFilePath);
             return JsonConvert.DeserializeObject<List<User>>(json);
         }
-        public (bool IsValid, string Role, string Message, string Token) ValidateUser(string username, string password, string requiredRole = null)
+        public (bool IsValid, string Role, string Message, string Token) ValidateUser(string username, string password)
         {
             var users = LoadUsers();
             var user = users.FirstOrDefault(u => u.UserName == username && u.Password == password);
 
             if (user != null)
             {
-                if (!string.IsNullOrEmpty(requiredRole))
-                {
-                    if (user.Role == requiredRole)
-                        return (true, user.Role, $"Access granted. Role: {user.Role}");
-                    else
-                        return (false, user.Role, $"Access denied. Your role: {user.Role}, required: {requiredRole}");
-                }
-                return (true, user.Role, $"Login successful. Role: {user.Role}");
+                var token = JwtManager.GenerateToken(user.UserName, user.Role);
+                return (true, user.Role, $"Login successful. Role: {user.Role}", token);
             }
-
-            return (false, user.Role, "Invalid username or password.");
+            return (false, user.Role, "Invalid username or password.",null);
         }
 
-        private string GenerateJSONWebToken()
-        {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+        //private string GenerateJSONWebToken()
+        //{
+        //    var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+        //    var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
-            var token = new JwtSecurityToken(
-              issuer: _config["Jwt:Issuer"],
-              audience: _config["Jwt:Audience"],
-              expires: DateTime.Now.AddMinutes(120),
-              signingCredentials: credentials);
+        //    var token = new JwtSecurityToken(
+        //      issuer: _config["Jwt:Issuer"],
+        //      audience: _config["Jwt:Audience"],
+        //      expires: DateTime.Now.AddMinutes(120),
+        //      signingCredentials: credentials);
 
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
+        //    return new JwtSecurityTokenHandler().WriteToken(token);
+        //}
     }
 }
