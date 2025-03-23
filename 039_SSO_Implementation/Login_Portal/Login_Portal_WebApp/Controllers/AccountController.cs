@@ -1,5 +1,6 @@
 ﻿using Login_Portal_WebApp.App_Code;
 using Login_Portal_WebApp.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -32,6 +33,12 @@ namespace Login_Portal_WebApp.Controllers
                         return Redirect(returnUrl);
                     }
                     TempData["IsValidated"] = true;
+                    model.Role = role;
+                    HttpContext.Session.SetString("Role", role);
+                    foreach (var state in ModelState)
+                    {
+                        HttpContext.Session.SetString(state.Key, state.Value.RawValue.ToString());
+                    }
                     HttpContext.Session.SetString("IsValidated", "True");
                     return RedirectToAction("Index", "Home");
                 }

@@ -21,6 +21,8 @@ namespace Login_Portal_WebApp.Controllers
             {
                 if (isValidated == "True")
                 {
+                    var userName = HttpContext.Session.GetString("UserName");
+                    TempData["UserName"] = userName;
                     TempData["IsValidated"] = true;
                 }
                 else if (isValidated == "False")
