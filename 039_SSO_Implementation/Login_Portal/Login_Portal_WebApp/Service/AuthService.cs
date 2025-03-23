@@ -1,13 +1,18 @@
 ﻿using Login_Portal_WebApp.Models;
+using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
 
 namespace Login_Portal_WebApp.App_Code
 {
     public class AuthService
     {
-        private readonly string _dataFilePath;
-        public AuthService(IWebHostEnvironment env)
+        private readonly IConfiguration _config;
+        private readonly string _dataFilePath;        
+        public AuthService(IConfiguration config, IWebHostEnvironment env)
         {
+            _config = config;
             _dataFilePath = Path.Combine(env.ContentRootPath, "App_Data", "users.json");
         }
         private List<User> LoadUsers()
@@ -15,7 +20,7 @@ namespace Login_Portal_WebApp.App_Code
             var json = System.IO.File.ReadAllText(_dataFilePath);
             return JsonConvert.DeserializeObject<List<User>>(json);
         }
-        public (bool IsValid, string Role, string Message) ValidateUser(string username, string password, string requiredRole = null)
+        public (bool IsValid, string Role, string Message, string Token) ValidateUser(string username, string password, string requiredRole = null)
         {
             var users = LoadUsers();
             var user = users.FirstOrDefault(u => u.UserName == username && u.Password == password);
@@ -33,6 +38,20 @@ namespace Login_Portal_WebApp.App_Code
             }
 
             return (false, user.Role, "Invalid username or password.");
+        }
+
+        private string GenerateJSONWebToken()
+        {
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+              issuer: _config["Jwt:Issuer"],
+              audience: _config["Jwt:Audience"],
+              expires: DateTime.Now.AddMinutes(120),
+              signingCredentials: credentials);
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }
