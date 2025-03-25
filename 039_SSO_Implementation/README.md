@@ -10,7 +10,7 @@ This project demonstrates how to implement **Single Sign-On (SSO)** using **JWT 
 ## 🧱 Project Structure
 
 ```
-/Login__Portal           --> ASP.NET MVC app that issues JWT tokens
+/Login_Portal           --> ASP.NET MVC app that issues JWT tokens
 /Main_Portal_WebApp      --> ASP.NET MVC app that receives and validates the token
 ```
 
@@ -36,4 +36,50 @@ This project demonstrates how to implement **Single Sign-On (SSO)** using **JWT 
 - JavaScript (`window.open()` for new-tab redirection)
 
 ---
+
+## ⚙️ How It Works
+
+### 1. **Login to Token Provider**
+
+The user logs in using a simple login form.
+
+> `/Login_Portal/Account/Login`
+
+On successful authentication, a JWT token is generated and passed to the SSO client app:
+
+```
+string token = JwtManager.GenerateToken(username, role);
+string redirectUrl = "https://sso-client-app.com/Auth/Login?token=" + HttpUtility.UrlEncode(token);
+return Json(new { redirectUrl });
+```
+
+---
+
+### 2. **Redirect in New Tab**
+
+On the client side (browser):
+
+```javascript
+fetch('/Account/Login')
+    .then(res => res.json())
+    .then(data => {
+        window.open(data.redirectUrl, '_blank'); // Opens SSO client in new tab
+    });
+```
+
+---
+
+### 3. **Token Validation on SSO Client**
+
+The SSO client receives the token and validates it:
+
+```
+var principal = JwtValidator.ValidateToken(token);
+Session["User"] = principal.Identity.Name;
+Session["Role"] = principal.FindFirst(ClaimTypes.Role)?.Value;
+```
+
+---
+
+
 
