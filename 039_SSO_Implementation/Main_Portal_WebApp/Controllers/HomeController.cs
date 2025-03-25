@@ -27,7 +27,7 @@ namespace Main_Portal_WebApp.Controllers
             var principal = JwtValidator.ValidateToken(token);
             if (principal == null)
             {
-               // return new HttpStatusCodeResult(401, "Invalid or expired token");
+               //return new HttpStatusCodeResult(401, "Invalid or expired token");
             }
 
             var username = principal.Identity.Name;
