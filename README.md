@@ -228,3 +228,12 @@ An in-depth guide on the Abstract Factory design pattern, demonstrating how it c
 A deep dive into advanced dependency injection techniques in ASP.NET Core. This project explores complex topics such as lifetime management nuances, container configuration, interception, decorators, and dynamic service resolution. With practical examples and performance considerations, it empowers developers to architect robust, flexible, and scalable DI solutions in sophisticated applications.
 
 ---
+
+### 039_SSO_Implementation
+
+This project demonstrates how to implement **Single Sign-On (SSO)** using **JWT (JSON Web Token)** in **ASP.NET MVC**. It consists of two parts:
+
+- **Token Provider** – Issues a JWT token after successful login.
+- **SSO Client** – Receives the token and authenticates the user based on it.
+
+---
