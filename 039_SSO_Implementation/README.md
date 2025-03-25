@@ -81,5 +81,50 @@ Session["Role"] = principal.FindFirst(ClaimTypes.Role)?.Value;
 
 ---
 
+## 🔐 JWT Claims Example
+
+```
+{
+  "sub": "john",
+  "role": "Admin",
+  "exp": 1711630400
+}
+```
+
+---
+
+## 🔑 JWT Secret Key
+
+> Ensure both apps share the **same secret key** (`HMAC SHA256`) to sign and validate the token.
+
+```
+private const string Secret = "MyVeryStrongSecretKey123!";
+```
+
+---
+
+## 🧪 Testing
+
+1. Run both apps in IIS Express or host on two local ports.
+2. Log in at the **Token Provider**.
+3. The app will open the **SSO Client** in a new tab and authenticate using the token.
+
+---
+
+## 📦 NuGet Packages
+
+Install in both projects:
+
+```
+Install-Package System.IdentityModel.Tokens.Jwt
+```
+
+---
+
+## 📜 License
+
+This project is open source and free to use under the [MIT License](LICENSE).
+
+---
 
 
