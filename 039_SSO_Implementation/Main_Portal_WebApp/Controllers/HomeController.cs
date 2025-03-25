@@ -30,8 +30,11 @@ namespace Main_Portal_WebApp.Controllers
                //return new HttpStatusCodeResult(401, "Invalid or expired token");
             }
 
-            var username = principal.Identity.Name;
+            var userName = principal.Identity.Name;
             var role = principal.FindFirst(ClaimTypes.Role)?.Value;
+
+            TempData["UserName"] = userName;
+            TempData["Role"] = role;
 
             // Optional: Set auth cookie or session
             //HttpContext.Session.SetString("User", username);

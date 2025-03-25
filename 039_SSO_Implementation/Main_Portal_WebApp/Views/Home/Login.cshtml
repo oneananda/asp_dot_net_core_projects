@@ -2,7 +2,13 @@
 @{
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    string userName = TempData["UserName"] != null ? (string)TempData["UserName"] : "Not a User!";
+    string role = TempData["Role"] != null ? (string)TempData["Role"] : "No Role!";
 }
 
-<h1>Login</h1>
+<h1>SSO Details:</h1>
+
+<div>User Name : <p>@userName</p></div>
+<div>Role : <p>@role</p></div>
 
