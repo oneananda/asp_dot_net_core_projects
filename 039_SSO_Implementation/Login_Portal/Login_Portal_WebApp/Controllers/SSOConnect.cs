@@ -22,8 +22,8 @@ namespace Login_Portal_WebApp.Controllers
             var role = HttpContext.Session.GetString("Role");
             var token = JwtManager.GenerateToken(userName, role);
 
-            return Redirect($"https://localhost:7209/Home/Login?Token={token}");
-            //return View();
+            //return Redirect($"https://localhost:7209/Home/Login?Token={token}");
+            return View();
         }
     }
 }
