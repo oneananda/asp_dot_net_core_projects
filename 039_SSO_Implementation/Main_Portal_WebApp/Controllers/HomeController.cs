@@ -21,6 +21,7 @@ namespace Main_Portal_WebApp.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Login(string token)
         {
             var principal = JwtValidator.ValidateToken(token);
