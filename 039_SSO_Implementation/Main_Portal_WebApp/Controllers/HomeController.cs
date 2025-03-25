@@ -3,7 +3,7 @@ using Main_Portal_WebApp.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Security.Claims;
-using System.Web.Mvc;
+
 
 namespace Main_Portal_WebApp.Controllers
 {
@@ -21,22 +21,23 @@ namespace Main_Portal_WebApp.Controllers
             return View();
         }
 
-        public ActionResult Login(string token)
+        public IActionResult Login(string token)
         {
             var principal = JwtValidator.ValidateToken(token);
             if (principal == null)
             {
-                return new HttpStatusCodeResult(401, "Invalid or expired token");
+               // return new HttpStatusCodeResult(401, "Invalid or expired token");
             }
 
             var username = principal.Identity.Name;
             var role = principal.FindFirst(ClaimTypes.Role)?.Value;
 
             // Optional: Set auth cookie or session
-            Session["User"] = username;
-            Session["Role"] = role;
+            //HttpContext.Session.SetString("User", username);
+            //Session["Role"] = role;
 
-            return Content($"Welcome {username}! Your role is {role}");
+            //return Content($"Welcome {username}! Your role is {role}");
+            return View();
         }
 
 

@@ -7,7 +7,7 @@ namespace Login_Portal_WebApp.Service
 {
     public class JwtManager
     {
-        private const string SecretKey = "MyVeryStrongSecretKey123!MyVeryStrongSecretKey123!MyVeryStrongSecretKey123!"; // should be 16+ chars
+        private const string SecretKey = "MyVeryStrongSecretKey123_MyVeryStrongSecretKey123_MyVeryStrongSecretKey123_sjhbs"; // should be 16+ chars
         public static string GenerateToken(string username, string role, int expireMinutes = 60)
         {
             var key = Encoding.UTF8.GetBytes(SecretKey);
