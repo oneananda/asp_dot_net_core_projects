@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using EF_Implementation.Models;
 
-namespace MyMvcApp.Data
+namespace EF_Implementation.Data
 {
     public class ApplicationDbContext : DbContext
     {
