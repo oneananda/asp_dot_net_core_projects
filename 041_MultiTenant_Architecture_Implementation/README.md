@@ -86,3 +86,86 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 > Useful for SaaS applications where data isolation is logical rather than physical.
 
 ---
+
+## ⚙️ EF DB-First Setup
+
+### Scaffold from Database:
+
+```bash
+dotnet ef dbcontext scaffold "Your_Connection_String" Microsoft.EntityFrameworkCore.SqlServer \
+  --output-dir Models \
+  --context-dir Data \
+  --context ApplicationDbContext \
+  --use-database-names \
+  --schema YourSchemaName
+```
+
+Use `--schema` to scaffold per schema (Schema-per-Tenant).
+
+---
+
+## 🔐 Tenant Resolution Middleware
+
+A sample middleware to resolve tenant from subdomain or header.
+
+```
+public class TenantResolutionMiddleware
+{
+    private readonly RequestDelegate _next;
+
+    public TenantResolutionMiddleware(RequestDelegate next) => _next = next;
+
+    public async Task Invoke(HttpContext context, ITenantProvider tenantProvider)
+    {
+        var tenantId = context.Request.Headers["X-Tenant-ID"].FirstOrDefault();
+        tenantProvider.SetTenant(tenantId);
+        await _next(context);
+    }
+}
+```
+
+Register in `Startup.cs` or `Program.cs`:
+
+```
+app.UseMiddleware<TenantResolutionMiddleware>();
+```
+
+---
+
+## 🧪 Testing
+
+Use tools like **Postman** to set the `X-Tenant-ID` header or query parameters to simulate different tenants.
+
+---
+
+## 🧩 When to Use What?
+
+| Model               | Pros                                 | Cons                                  |
+|--------------------|--------------------------------------|---------------------------------------|
+| Database-per-tenant| Strong isolation, easy backups       | Harder to scale with many tenants     |
+| Schema-per-tenant  | Isolation + shared infra             | Migration complexity                  |
+| Shared schema      | Simpler management, better scaling   | Weaker data isolation, extra filtering|
+
+---
+
+## 📝 Notes
+
+- EF Core currently doesn't support automatic schema switching; custom handling is needed.
+- Use `IHttpContextAccessor` to pass tenant info into `DbContext`.
+- Consider caching strategies for tenant configurations.
+
+---
+
+## 📚 References
+
+- [EF Core Docs](https://learn.microsoft.com/en-us/ef/core/)
+- [Multi-Tenancy Patterns](https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/overview)
+
+---
+
+## 🧑‍💻 Author
+
+Built with ❤️ using ASP.NET Core MVC and Entity Framework Core.
+
+
+---
