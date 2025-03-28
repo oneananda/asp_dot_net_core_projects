@@ -1,3 +1,6 @@
+using Database_Per_Tenant.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Database_Per_Tenant
 {
     public class Program
@@ -8,6 +11,9 @@ namespace Database_Per_Tenant
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 
