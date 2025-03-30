@@ -15,6 +15,26 @@ namespace Database_Per_Tenant.Controllers
 
         public IActionResult Index()
         {
+            var isValidated = HttpContext.Session.GetString("IsValidated");
+
+            if (isValidated != null)
+            {
+                if (isValidated == "True")
+                {
+                    var userName = HttpContext.Session.GetString("UserName");
+                    TempData["UserName"] = userName;
+                    TempData["IsValidated"] = true;
+                }
+                else if (isValidated == "False")
+                {
+                    TempData["IsValidated"] = false;
+                }
+            }
+            else
+            {
+                TempData["IsValidated"] = false;
+            }
+
             return View();
         }
 

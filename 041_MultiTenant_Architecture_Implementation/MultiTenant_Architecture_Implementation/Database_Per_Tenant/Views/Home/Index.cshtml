@@ -1,8 +1,21 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+
+    bool isValidated = TempData["IsValidated"] != null && (bool)TempData["IsValidated"];
+    string message = TempData["Message"] != null ? (string)TempData["Message"] : "Not Authenticated!";
+    string userName = TempData["UserName"] != null ? (string)TempData["UserName"] : "Not a User!";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@if (isValidated)
+{
+    <div class="text-center">
+        <h4 class="display-4">Welcome to SSO Site! @userName</h4>
+    </div>
+    <div class="text-center">
+        @Html.Partial("LoggedIn")
+    </div>
+}
+else
+{
+    <h1 class="display-4">@message</h1>
+}
