@@ -1,4 +1,5 @@
 using Database_Per_Tenant.Data;
+using Database_Per_Tenant.Service;
 using Microsoft.EntityFrameworkCore;
 
 namespace Database_Per_Tenant
@@ -14,6 +15,8 @@ namespace Database_Per_Tenant
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddScoped<AuthService>();
 
             var app = builder.Build();
 
