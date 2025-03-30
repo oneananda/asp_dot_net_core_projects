@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>
