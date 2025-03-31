@@ -7,7 +7,8 @@ namespace Database_Per_Tenant.Data
     public class ApplicationDbContext : DbContext
     {
         private readonly IConfiguration _configuration;
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IConfiguration configuration)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, 
+            IConfiguration configuration)
             : base(options)
         {
             _configuration = configuration;
@@ -16,8 +17,6 @@ namespace Database_Per_Tenant.Data
         {
             optionsBuilder.UseSqlServer(_configuration.GetConnectionString("TenantTemplate"));
         }
-
-
         public DbSet<Client> Client { get; set; }
     }
 }

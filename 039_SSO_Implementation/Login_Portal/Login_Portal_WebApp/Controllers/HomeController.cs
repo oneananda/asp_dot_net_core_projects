@@ -13,6 +13,8 @@ namespace Login_Portal_WebApp.Controllers
             _logger = logger;
         }
 
+
+
         public IActionResult Index()
         {
             var isValidated = HttpContext.Session.GetString("IsValidated");
