@@ -249,3 +249,8 @@ This project demonstrates how to implement **Entity Framework (EF)** in an **ASP
 
 --- 
 
+### 041_MultiTenant_Architecture_Implementation
+
+This project demonstrates how to implement a Multi-Tenant Architecture in an ASP.NET MVC application. It focuses on designing scalable applications that serve multiple tenants (clients) while maintaining data isolation and configuration flexibility. 
+
+--- 
