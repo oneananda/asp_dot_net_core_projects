@@ -1,4 +1,6 @@
 
+using _042_AddSingleton_Deep_Dive.Services;
+
 namespace _042_AddSingleton_Deep_Dive
 {
     public class Program
@@ -6,6 +8,8 @@ namespace _042_AddSingleton_Deep_Dive
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddSingleton<ITimeService, TimeService>();
 
             // Add services to the container.
 
