@@ -1,4 +1,5 @@
 
+using _042_AddSingleton_Deep_Dive.Models;
 using _042_AddSingleton_Deep_Dive.Services;
 
 namespace _042_AddSingleton_Deep_Dive
@@ -17,6 +18,13 @@ namespace _042_AddSingleton_Deep_Dive
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            var appSettings = new AppSettings
+            {
+                AppName = "AddSingleton Deep Dive"
+            };
+            builder.Services.AddSingleton(appSettings);
+
 
             var app = builder.Build();
 
