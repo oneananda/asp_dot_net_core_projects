@@ -1,0 +1,6 @@
+@_042_AddSingleton_Deep_Dive_HostAddress = http://localhost:5131
+
+GET {{_042_AddSingleton_Deep_Dive_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
