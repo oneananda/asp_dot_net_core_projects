@@ -25,6 +25,11 @@ namespace _042_AddSingleton_Deep_Dive
             };
             builder.Services.AddSingleton(appSettings);
 
+            builder.Services.AddSingleton<IGuidService>(provider =>
+            {
+                var generatedGuid = Guid.NewGuid();
+                return new GuidService(generatedGuid);
+            });
 
             var app = builder.Build();
 
