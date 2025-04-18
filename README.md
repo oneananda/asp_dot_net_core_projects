@@ -254,3 +254,9 @@ This project demonstrates how to implement **Entity Framework (EF)** in an **ASP
 This project demonstrates how to implement a Multi-Tenant Architecture in an ASP.NET MVC application. It focuses on designing scalable applications that serve multiple tenants (clients) while maintaining data isolation and configuration flexibility. 
 
 --- 
+
+### 042_AddSingleton_Deep_Dive
+
+A comprehensive exploration of the AddSingleton service lifetime in ASP.NET Core. This project dissects scenarios where singleton lifetimes are most effective, highlighting how dependencies are managed per request. 
+
+---
