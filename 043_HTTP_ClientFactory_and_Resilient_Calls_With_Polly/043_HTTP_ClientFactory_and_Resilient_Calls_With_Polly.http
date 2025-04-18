@@ -1,0 +1,6 @@
+@_043_HTTP_ClientFactory_and_Resilient_Calls_With_Polly_HostAddress = http://localhost:5131
+
+GET {{_043_HTTP_ClientFactory_and_Resilient_Calls_With_Polly_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
