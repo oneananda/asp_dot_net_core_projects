@@ -1,0 +1,6 @@
+@_044_Hangfire_Background_Jobs_HostAddress = http://localhost:5296
+
+GET {{_044_Hangfire_Background_Jobs_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
