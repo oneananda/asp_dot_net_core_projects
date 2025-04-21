@@ -18,21 +18,25 @@ namespace _044_Hangfire_Background_Jobs
             Directory.CreateDirectory(dbFolder);
             var sqliteDb = Path.Combine(dbFolder, "hangfire.db");
 
+            if (!File.Exists(sqliteDb))
+            {
+                // This will create an empty SQLite file
+                using (File.Create(sqliteDb)) { }
+            }
+
             builder.Services.AddHangfire(cfg => cfg
-            .UseSimpleAssemblyNameTypeSerializer()
-            .UseRecommendedSerializerSettings()
-            .UseSQLiteStorage(
-                // connection string pointing at our file:
-                $"Data Source={sqliteDb};Cache=Shared",
-                // optional settings (tweak as needed):
-                new SQLiteStorageOptions
-                {
-                    QueuePollInterval = TimeSpan.FromSeconds(15),
-                    InvisibilityTimeout = TimeSpan.FromMinutes(5),
-                    JobExpirationCheckInterval = TimeSpan.FromHours(1)
+                .UseSimpleAssemblyNameTypeSerializer()
+                .UseRecommendedSerializerSettings()
+                .UseSQLiteStorage(
+                    sqliteDb,
+                    new SQLiteStorageOptions
+                    {
+                        QueuePollInterval = TimeSpan.FromSeconds(15),
+                        InvisibilityTimeout = TimeSpan.FromMinutes(5),
+                        JobExpirationCheckInterval = TimeSpan.FromHours(1)
                     }
-                )                                       
-             );
+                )
+            );
 
             // Add the Hangfire server
             builder.Services.AddHangfireServer();
