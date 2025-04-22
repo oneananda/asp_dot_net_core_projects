@@ -115,3 +115,6 @@ $RECYCLE.BIN/
 /026_AuthO_Implementation/appsettings.json
 /026_AuthO_Implementation/appsettings.Development.json
 /041_MultiTenant_Architecture_Implementation/MultiTenant_Architecture_Implementation/Database_Per_Tenant/appsettings.json
+/044_Hangfire_Background_Jobs/App_Data/hangfire.db
+/044_Hangfire_Background_Jobs/App_Data/hangfire.db-shm
+/044_Hangfire_Background_Jobs/App_Data/hangfire.db-wal

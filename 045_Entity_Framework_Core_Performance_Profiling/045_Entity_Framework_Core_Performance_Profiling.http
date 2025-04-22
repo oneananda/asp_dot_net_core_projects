@@ -1,0 +1,6 @@
+@_045_Entity_Framework_Core_Performance_Profiling_HostAddress = http://localhost:5016
+
+GET {{_045_Entity_Framework_Core_Performance_Profiling_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
