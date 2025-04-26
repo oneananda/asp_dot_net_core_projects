@@ -1,0 +1,24 @@
+﻿@page
+@model Entity_Framework_Core_Performance_Profiling_Dashboard.Pages.DashboardModel
+@{
+    ViewData["Title"] = "EF Core Performance Profiling Dashboard";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div id="database-status">
+    <h3>Status:</h3>
+    <p>@Model.DatabaseStatus</p>
+</div>
+
+<div id="operation-status">
+    <h3>Operation Updates:</h3>
+    <ul>
+        @foreach (var update in Model.OperationUpdates)
+        {
+            <li>@update</li>
+        }
+    </ul>
+</div>
+
+<button id="check-db-status" class="btn btn-primary">Check Database</button>
