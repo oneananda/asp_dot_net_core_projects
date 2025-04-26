@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "045_Entity_Framework_Core_Performance_Profiling", "045_Entity_Framework_Core_Performance_Profiling.csproj", "{43DEA8D1-E1BE-4F6E-BFF9-973BF58C0531}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "045_Entity_Framework_Core_Performance_Profiling", "045_Entity_Framework_Core_Performance_Profiling.csproj", "{43DEA8D1-E1BE-4F6E-BFF9-973BF58C0531}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity_Framework_Core_Performance_Profiling_Dashboard", "Entity_Framework_Core_Performance_Profiling_Dashboard\Entity_Framework_Core_Performance_Profiling_Dashboard.csproj", "{EF8F9DE9-E6FA-44DB-8DBA-7106DCA4A8EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{43DEA8D1-E1BE-4F6E-BFF9-973BF58C0531}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43DEA8D1-E1BE-4F6E-BFF9-973BF58C0531}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43DEA8D1-E1BE-4F6E-BFF9-973BF58C0531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF8F9DE9-E6FA-44DB-8DBA-7106DCA4A8EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF8F9DE9-E6FA-44DB-8DBA-7106DCA4A8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF8F9DE9-E6FA-44DB-8DBA-7106DCA4A8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF8F9DE9-E6FA-44DB-8DBA-7106DCA4A8EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
