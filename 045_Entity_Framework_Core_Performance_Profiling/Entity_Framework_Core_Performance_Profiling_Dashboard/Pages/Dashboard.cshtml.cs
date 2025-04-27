@@ -1,13 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
 using SqlCommand = Microsoft.Data.SqlClient.SqlCommand;
 using SqlConnection = Microsoft.Data.SqlClient.SqlConnection;
 
@@ -15,34 +7,37 @@ namespace Entity_Framework_Core_Performance_Profiling_Dashboard.Pages
 {
     public class DashboardModel : PageModel
     {
-        private readonly string _connectionString = "Your SQL Server Connection String Here";
+        private readonly IConfiguration _configuration;
+        //private readonly string _connectionString = "Your SQL Server Connection String Here";
         private readonly string _databaseName = "Profiling_DB";
         public string DatabaseStatus { get; set; }
         public List<string> OperationUpdates { get; set; }
 
-        public DashboardModel()
+        public DashboardModel(IConfiguration configuration)
         {
+            _configuration = configuration;
             OperationUpdates = new List<string>();
         }
-
         public async Task<IActionResult> OnGetAsync()
         {
-            DatabaseStatus = await CheckDatabaseStatusAsync();
+            string connectionString = _configuration.GetConnectionString("DefaultConnection");
+            DatabaseStatus = await CheckDatabaseStatusAsync(connectionString);
             return Page();
         }
 
         public async Task<IActionResult> OnPostCheckDbStatusAsync()
         {
+            string connectionString = _configuration.GetConnectionString("DefaultConnection");
             OperationUpdates.Clear();  // Clear previous updates
-            DatabaseStatus = await CheckDatabaseStatusAsync();
+            DatabaseStatus = await CheckDatabaseStatusAsync(connectionString);
             return Partial("_DashboardUpdates", this); // Return partial view to update the status dynamically
         }
 
-        private async Task<string> CheckDatabaseStatusAsync()
+        private async Task<string> CheckDatabaseStatusAsync(string connectionString)
         {
             try
             {
-                using var connection = new SqlConnection(_connectionString);
+                using var connection = new SqlConnection(connectionString);
                 await connection.OpenAsync();
                 var command = new SqlCommand($"SELECT DB_ID('{_databaseName}')", connection);
                 var result = await command.ExecuteScalarAsync();
