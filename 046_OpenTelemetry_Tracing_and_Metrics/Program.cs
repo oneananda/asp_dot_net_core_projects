@@ -1,3 +1,6 @@
+using Microsoft.Extensions.DependencyInjection;
+using OpenTelemetry.Trace;
+using OpenTelemetry.Resources;
 
 namespace _046_OpenTelemetry_Tracing_and_Metrics
 {
@@ -10,6 +13,16 @@ namespace _046_OpenTelemetry_Tracing_and_Metrics
             // Add services to the container.
 
             builder.Services.AddControllers();
+
+            // Add OpenTelemetry Tracing
+            builder.Services.AddOpenTelemetryTracing(builder => builder
+                .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService("MyAspNetCoreService"))
+                .AddAspNetCoreInstrumentation() // This adds automatic instrumentation for HTTP requests in ASP.NET Core
+                .AddHttpClientInstrumentation() // Adds automatic instrumentation for HTTP client calls
+                .AddPrometheusExporter()); // Exports traces to Prometheus (for visualization in Grafana)
+
+
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
