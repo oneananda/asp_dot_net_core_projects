@@ -1,0 +1,6 @@
+@_046_OpenTelemetry_Tracing_and_Metrics_HostAddress = http://localhost:5236
+
+GET {{_046_OpenTelemetry_Tracing_and_Metrics_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
