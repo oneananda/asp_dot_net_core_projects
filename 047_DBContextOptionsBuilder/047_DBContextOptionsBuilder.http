@@ -1,0 +1,6 @@
+@_047_DBContextOptionsBuilder_HostAddress = http://localhost:5029
+
+GET {{_047_DBContextOptionsBuilder_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
