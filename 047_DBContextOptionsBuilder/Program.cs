@@ -1,4 +1,6 @@
 
+using _047_DBContextOptionsBuilder.Services;
+
 namespace _047_DBContextOptionsBuilder
 {
     public class Program
@@ -13,6 +15,9 @@ namespace _047_DBContextOptionsBuilder
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddDbContext<MyDbContext>(options =>
+            options.UseSqlServer("Server=.;Database=MyDb;Trusted_Connection=True;"));
 
             var app = builder.Build();
 
