@@ -19,6 +19,13 @@ namespace _047_DBContextOptionsBuilder
             builder.Services.AddDbContext<MyDbContext>(options =>
             options.UseSqlServer("Server=.;Database=MyDb;Trusted_Connection=True;"));
 
+            //  Enable Sensitive Data Logging and Lazy Loading
+            services.AddDbContext<MyDbContext>(options =>
+            options.UseSqlServer("Server=.;Database=MyDb;Trusted_Connection=True;")
+           .EnableSensitiveDataLogging()
+           .UseLazyLoadingProxies());
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
