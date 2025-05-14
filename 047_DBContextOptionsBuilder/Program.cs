@@ -1,5 +1,6 @@
 
 using _047_DBContextOptionsBuilder.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace _047_DBContextOptionsBuilder
 {
@@ -25,6 +26,14 @@ namespace _047_DBContextOptionsBuilder
            .EnableSensitiveDataLogging()
            .UseLazyLoadingProxies());
 
+            // Using SQLite for Testing
+            var options = new DbContextOptionsBuilder<MyDbContext>()
+            .UseSqlite("DataSource=:memory:")
+            .Options;
+
+            using var context = new MyDbContext(options);
+            context.Database.OpenConnection();
+            context.Database.EnsureCreated();
 
             var app = builder.Build();
 
