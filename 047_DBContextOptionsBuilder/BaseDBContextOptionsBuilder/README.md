@@ -1,4 +1,4 @@
-# DBContextOptionsBuilder 
+# Using Basic DBContextOptionsBuilder 
 
 This is a simple C# library that provides a fluent API for configuring DbContext options in Entity Framework Core. It allows you to easily set up options such as connection strings, logging, and other configurations.
 
