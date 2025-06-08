@@ -10,13 +10,6 @@ namespace _048_ApiMockingService
         {
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddDbContext<MockDbContext>(opt => opt.UseSqlite("Data Source=mocks.db"));
-            builder.Services.AddControllers();
-            var app = builder.Build();
-
-            app.UseMiddleware<DynamicMockMiddleware>(); // Must come BEFORE MapControllers
-            app.MapControllers();
-            app.Run();
-
 
             // Add services to the container.
 
@@ -27,6 +20,7 @@ namespace _048_ApiMockingService
 
             var app = builder.Build();
 
+            app.UseMiddleware<DynamicMockMiddleware>();
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
