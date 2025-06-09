@@ -86,3 +86,42 @@ dotnet run
 
 ---
 
+## 🧪 Using a Mock Endpoint
+
+Once created, simply make a request to the specified path (e.g., `GET /api/test`), and the mocked response will be returned.
+
+---
+
+## 🧱 Project Structure
+
+```
+/ApiMockingService
+│
+├── Controllers/          # REST API for managing mocks
+├── Middleware/           # Dynamic mock routing logic
+├── Models/               # Data model for mock endpoints
+├── Data/                 # EF Core context
+├── Program.cs            # App startup
+└── README.md             # You're here!
+```
+
+---
+
+## 🔐 Roadmap & Features
+
+* [ ] JWT Authentication for mock management
+* [ ] UI dashboard for mock editing
+* [ ] Import/Export mock definitions
+* [ ] Request logging and analytics
+* [ ] Project-based mock grouping
+* [ ] Rate limiting per mock
+
+---
+
+## 🤝 Contributing
+
+PRs are welcome! For major changes, open an issue first to discuss your ideas.
+
+---
+
+
