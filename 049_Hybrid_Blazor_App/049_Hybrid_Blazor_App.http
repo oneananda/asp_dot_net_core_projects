@@ -1,0 +1,6 @@
+@_049_Hybrid_Blazor_App_HostAddress = http://localhost:5116
+
+GET {{_049_Hybrid_Blazor_App_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
