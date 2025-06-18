@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace auth_site.Controllers
 {
@@ -10,23 +8,25 @@ namespace auth_site.Controllers
     [ApiController]
     public class ValidateController : ControllerBase
     {
-        [HttpPost("strings")]
-        public IActionResult ValidateStrings([FromBody] List<string> values)
+        // Define your allowed strings here
+        private static readonly HashSet<string> AllowedStrings = new()
         {
-            if (values == null || !values.Any())
-                return BadRequest("Input list cannot be empty.");
+            "Alpha",
+            "Beta",
+            "Gamma",
+            "Delta"
+        };
 
-            // Example: Validate that each string is not null/empty and matches a pattern (alphanumeric, min 3 chars)
-            var invalidItems = values
-                .Select((value, index) => new { value, index })
-                .Where(x => string.IsNullOrWhiteSpace(x.value) || !Regex.IsMatch(x.value, @"^[a-zA-Z0-9]{3,}$"))
-                .Select(x => x.index)
-                .ToList();
+        [HttpPost("string")]
+        public IActionResult ValidateString([FromBody] string value)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                return BadRequest("Input string cannot be empty.");
 
-            if (invalidItems.Any())
-                return BadRequest(new { message = "Validation failed.", invalidIndexes = invalidItems });
+            if (!AllowedStrings.Contains(value))
+                return BadRequest(new { message = "Validation failed. String is not allowed." });
 
-            return Ok(new { message = "All strings are valid." });
+            return Ok(new { message = "String is valid." });
         }
     }
 }
