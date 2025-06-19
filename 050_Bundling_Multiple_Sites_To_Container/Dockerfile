@@ -1,5 +1,6 @@
 # Stage 1: Build ASP.NET Web API
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-api
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-api
+
 WORKDIR /src
 COPY auth-site/ ./auth-site/
 WORKDIR /src/auth-site
