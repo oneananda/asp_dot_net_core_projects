@@ -16,7 +16,10 @@ RUN npm run build
 # Stage 3: Final runtime
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS final
 # Install nginx
-RUN apt-get update && apt-get install -y nginx && rm -rf /var/lib/apt/lists/*
+RUN apt-get update 
+RUN apt-get install -y nginx 
+RUN rm -rf /var/lib/apt/lists/*
+
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Copy built .NET app
