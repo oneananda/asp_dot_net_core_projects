@@ -10,7 +10,7 @@ function App() {
   const validateString = async () => {
     setResult(null);
     try {
-      const response = await fetch("http://localhost:5000/api/validate/string", {
+        const response = await fetch("https://localhost:7107/api/validate/string", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
