@@ -19,6 +19,7 @@ namespace auth_site
                 });
             });
 
+            builder.WebHost.UseUrls("http://0.0.0.0:5000");
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -41,6 +42,8 @@ namespace auth_site
             app.UseCors();
 
             app.MapControllers();
+
+
 
             app.Run();
         }
