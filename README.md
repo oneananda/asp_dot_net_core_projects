@@ -260,3 +260,10 @@ This project demonstrates how to implement a Multi-Tenant Architecture in an ASP
 A comprehensive exploration of the AddSingleton service lifetime in ASP.NET Core. This project dissects scenarios where singleton lifetimes are most effective, highlighting how dependencies are managed per request. 
 
 ---
+
+### 043_HTTP_ClientFactory_and_Resilient_Calls
+
+This project focuses on the HttpClientFactory in ASP.NET Core and its role in promoting resilience in HTTP communication. It demonstrates techniques such as retry policies, circuit breakers, and handler lifetimes using Polly integration.
+
+---
+
