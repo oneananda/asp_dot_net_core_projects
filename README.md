@@ -267,3 +267,8 @@ This project focuses on the HttpClientFactory in ASP.NET Core and its role in pr
 
 ---
 
+### 044_Hangfire_Background_Jobs
+
+A practical implementation of Hangfire for handling background jobs in .NET applications. This sample covers fire-and-forget, delayed, recurring, and continuation jobs, including dashboard integration and storage configuration
+
+---
