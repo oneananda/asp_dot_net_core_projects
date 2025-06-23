@@ -272,3 +272,10 @@ This project focuses on the HttpClientFactory in ASP.NET Core and its role in pr
 A practical implementation of Hangfire for handling background jobs in .NET applications. This sample covers fire-and-forget, delayed, recurring, and continuation jobs, including dashboard integration and storage configuration
 
 ---
+
+### 045_Entity_Framework_Core_Performance_Profiling
+
+This project dives into performance profiling in Entity Framework Core. It introduces tools like MiniProfiler and EF Core logging techniques to measure query performance, optimize LINQ, and reduce N+1 query issues.
+
+---
+
