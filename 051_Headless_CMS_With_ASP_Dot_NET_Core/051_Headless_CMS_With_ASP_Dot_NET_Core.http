@@ -1,0 +1,6 @@
+@_051_Headless_CMS_With_ASP_Dot_NET_Core_HostAddress = http://localhost:5062
+
+GET {{_051_Headless_CMS_With_ASP_Dot_NET_Core_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
