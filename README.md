@@ -279,3 +279,8 @@ This project dives into performance profiling in Entity Framework Core. It intro
 
 ---
 
+### 046_OpenTelemetry_Tracing_and_Metrics
+
+An introduction to implementing OpenTelemetry in .NET apps for distributed tracing and telemetry data collection. It covers exporting metrics to observability platforms like Jaeger and Prometheus and configuring spans and activities.
+
+---
