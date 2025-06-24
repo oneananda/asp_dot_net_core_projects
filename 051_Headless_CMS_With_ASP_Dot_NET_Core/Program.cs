@@ -1,4 +1,7 @@
 
+using _051_Headless_CMS_With_ASP_Dot_NET_Core.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace _051_Headless_CMS_With_ASP_Dot_NET_Core
 {
     public class Program
@@ -13,6 +16,9 @@ namespace _051_Headless_CMS_With_ASP_Dot_NET_Core
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddDbContext<CMSDbContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 
