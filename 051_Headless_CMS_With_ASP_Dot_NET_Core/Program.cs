@@ -1,6 +1,7 @@
 
 using _051_Headless_CMS_With_ASP_Dot_NET_Core.Models;
 using Microsoft.EntityFrameworkCore;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace _051_Headless_CMS_With_ASP_Dot_NET_Core
 {
@@ -16,6 +17,11 @@ namespace _051_Headless_CMS_With_ASP_Dot_NET_Core
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services
+                .AddGraphQLServer()
+                .AddQueryType<Query>();        
+
 
             builder.Services.AddDbContext<CMSDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -33,8 +39,11 @@ namespace _051_Headless_CMS_With_ASP_Dot_NET_Core
 
             app.UseAuthorization();
 
-
             app.MapControllers();
+
+            app.UseStaticFiles();
+
+            app.MapGraphQL();
 
             app.Run();
         }
