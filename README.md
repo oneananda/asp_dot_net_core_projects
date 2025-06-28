@@ -284,3 +284,11 @@ This project dives into performance profiling in Entity Framework Core. It intro
 An introduction to implementing OpenTelemetry in .NET apps for distributed tracing and telemetry data collection. It covers exporting metrics to observability platforms like Jaeger and Prometheus and configuring spans and activities.
 
 ---
+
+### 047_DBContextOptionsBuilder
+
+This sample demonstrates advanced configuration of DbContextOptionsBuilder in Entity Framework Core. It covers techniques for customizing context behavior, connection strings, provider-specific settings, and interceptors.
+
+---
+
+
