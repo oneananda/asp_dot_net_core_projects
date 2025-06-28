@@ -291,4 +291,8 @@ This sample demonstrates advanced configuration of DbContextOptionsBuilder in En
 
 ---
 
+### 048_ApiMockingService
 
+A project designed to simulate backend APIs for testing purposes using mocking frameworks or in-memory test servers. Ideal for frontend integration or service contract testing without requiring a live backend.
+
+---
