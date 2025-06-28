@@ -296,3 +296,9 @@ This sample demonstrates advanced configuration of DbContextOptionsBuilder in En
 A project designed to simulate backend APIs for testing purposes using mocking frameworks or in-memory test servers. Ideal for frontend integration or service contract testing without requiring a live backend.
 
 ---
+
+### 049_Hybrid_Blazor_App
+
+Explores building hybrid Blazor applications using Blazor WebAssembly and Blazor Server together. It explains scenarios where hybrid architecture provides the best of both worlds, along with deployment and performance considerations.
+
+---
