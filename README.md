@@ -308,3 +308,9 @@ Explores building hybrid Blazor applications using Blazor WebAssembly and Blazor
 This project showcases strategies for bundling multiple ASP.NET Core sites or APIs into a single container image. Useful for microservices architecture, the project emphasizes Docker multi-stage builds and orchestration with Docker Compose.
 
 ---
+
+### 051_Headless_CMS_With_ASP_Dot_NET_Core
+
+Builds a headless CMS using ASP.NET Core APIs to manage content (pages, media, metadata) and serve it via REST or GraphQL — useful for JAMstack or mobile frontends.
+
+---
