@@ -302,3 +302,9 @@ A project designed to simulate backend APIs for testing purposes using mocking f
 Explores building hybrid Blazor applications using Blazor WebAssembly and Blazor Server together. It explains scenarios where hybrid architecture provides the best of both worlds, along with deployment and performance considerations.
 
 ---
+
+### 050_Bundling_Multiple_Sites_To_Container
+
+This project showcases strategies for bundling multiple ASP.NET Core sites or APIs into a single container image. Useful for microservices architecture, the project emphasizes Docker multi-stage builds and orchestration with Docker Compose.
+
+---
