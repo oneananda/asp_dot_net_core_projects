@@ -9,6 +9,11 @@
             dynamic name = "Alice";
             Console.WriteLine(name.Length); // Resolved at runtime
 
+            // Compare var vs dynamic
+            var x = "Hello";     // Type resolved at compile time
+            dynamic y = "Hello"; // Type resolved at runtime
+
+
             Console.WriteLine("Dyanamic Deep Dive!");
         }
     }
