@@ -34,6 +34,11 @@ namespace dynamic_Deep_Dive._02_Intermediate
             user.SayHi = new Action(() => Console.WriteLine("Hi from Sam!"));
             user.SayHi();
 
+            // Calling methods that may or may not exist
+
+            dynamic maybe = new { Message = "I exist!" };
+            // Will throw RuntimeBinderException if method does not exist
+            Console.WriteLine(maybe.Message);
 
             #endregion
         }
