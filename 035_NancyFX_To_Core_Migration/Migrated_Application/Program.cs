@@ -21,9 +21,9 @@ namespace _035_NancyFX_To_Core_Migration
             var app = builder.Build();
 
             // Using Minimal API Approach
-            //app.MapGet("/", () => "Hello from ASP.NET Core via NancyFx!");
+            app.MapGet("/", () => "Hello from ASP.NET Core via NancyFx!");
 
-            //app.MapGet("/greet/{name}", (string name) => $"Hello, {name} via NancyFx!");
+            app.MapGet("/greet/{name}", (string name) => $"Hello, {name} via NancyFx!");
 
           
 
