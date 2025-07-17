@@ -1,3 +1,5 @@
+using Nancy;
+using Nancy.Owin;
 
 namespace _035_NancyFX_To_Core_Migration
 {
@@ -14,12 +16,16 @@ namespace _035_NancyFX_To_Core_Migration
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddSingleton<NancyFx_Class>();
+
             var app = builder.Build();
 
             // Using Minimal API Approach
-            app.MapGet("/", () => "Hello from ASP.NET Core!");
+            //app.MapGet("/", () => "Hello from ASP.NET Core via NancyFx!");
 
-            app.MapGet("/greet/{name}", (string name) => $"Hello, {name}!");
+            //app.MapGet("/greet/{name}", (string name) => $"Hello, {name} via NancyFx!");
+
+          
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -31,7 +37,6 @@ namespace _035_NancyFX_To_Core_Migration
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
