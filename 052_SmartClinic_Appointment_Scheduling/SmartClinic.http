@@ -1,0 +1,39 @@
+@baseUrl = http://localhost:5050
+@token = {{token}}
+
+### Authenticate
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "Admin@123"
+}
+
+### Get Doctors (public)
+GET {{baseUrl}}/api/doctors
+
+### Create Doctor (requires admin token)
+POST {{baseUrl}}/api/doctors
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Dr. Nathan Drake",
+  "specialization": "Dermatology",
+  "email": "nathan.drake@smartclinic.test",
+  "phoneNumber": "+1-555-0198",
+  "availableDays": ["Tuesday", "Thursday"]
+}
+
+### Schedule Appointment (requires token)
+POST {{baseUrl}}/api/appointments
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "doctorId": "{doctor-guid}",
+  "patientId": "{patient-guid}",
+  "scheduledAt": "2025-01-15T15:00:00Z",
+  "reason": "Annual check-up"
+}
